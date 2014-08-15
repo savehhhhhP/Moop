@@ -9,7 +9,10 @@ import org.hibernate.Transaction;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
+import domain.Enterprise;
 import domain.ProjectInfo;
+import domain.ProjectState;
+import domain.ProjectType;
 import domain.UserInfo;
 
 public class ProjectDAOImpl extends HibernateDaoSupport implements ProjectDAO {
@@ -19,10 +22,12 @@ public class ProjectDAOImpl extends HibernateDaoSupport implements ProjectDAO {
 		// TODO Auto-generated method stub
 		if (projectInfo == null)
 			return;
-		getHibernateTemplate().save(projectInfo);
+		getHibernateTemplate().save(projectInfo);	
 
 	}
 
+
+	
 	@Override
 	public Integer findByName(String projectName) {
 		// TODO Auto-generated method stub
@@ -43,16 +48,16 @@ public class ProjectDAOImpl extends HibernateDaoSupport implements ProjectDAO {
 				.openSession();
 		Transaction tx = session.beginTransaction();
 
-	/*	Query query = session
-				.createQuery("select new domain.ProjectInfo(c.name,c.introduction,c.picturePath) from ProjectInfo as c where c.userInfo.id="
-						+ masterId);*/
+		Query query = session
+				.createQuery("select new domain.ProjectInfo(c.id, c.name,c.introduction,c.picturePath) from ProjectInfo as c where c.userInfo.id="
+						+ masterId);
 	/*	Query query = session
 				.createQuery("select new domain.ProjectInfo(c.id,c.name,c.number,t.name,c.enterpriseName,c.startDate,c.endDate,c.funds," +
 						"c.isPublic,s.name,c.introduction,c.picturePath) from ProjectInfo as c,ProjectType as t,ProjectState as s where c.userInfo.id="
 						+ masterId + " and c.projectType.id=t.id and c.projectState.id=s.id");*/
 		
-		Query query = session
-				.createQuery("from ProjectInfo as c where c.userInfo.id=" + masterId);
+		/*Query query = session
+				.createQuery("from ProjectInfo as c where c.userInfo.id=" + masterId);*/
 		List<ProjectInfo> projectInfoList = query.list();
 		session.close();
 		return projectInfoList;
@@ -65,7 +70,6 @@ public class ProjectDAOImpl extends HibernateDaoSupport implements ProjectDAO {
 
 		Session session = this.getHibernateTemplate().getSessionFactory()
 				.openSession();
-		System.out.println(session.toString());
 		Transaction tx = session.beginTransaction();
 		Query query = session
 				.createQuery("select new domain.ProjectInfo(name,introduction,picturePath) from ProjectInfo order by id desc");
@@ -83,5 +87,50 @@ public class ProjectDAOImpl extends HibernateDaoSupport implements ProjectDAO {
 		 * 
 		 * System.out.println("aaaa"); return null;
 		 */
+	}
+
+	@Override
+	public ProjectInfo selectProjectInfo(int projectId) {
+		// TODO Auto-generated method stub
+		Session session = this.getHibernateTemplate().getSessionFactory().openSession();
+		Transaction tx = session.beginTransaction();
+	
+		Query query = session.createQuery("select new domain.ProjectInfo(c.name, c.number, c.projectType, " +
+				"c.enterprise, c.startDate, c.endDate, c.funds, c.isPublic, c.projectState, c.introduction) from ProjectInfo" +
+				" as c where c.id=" + projectId);
+		ProjectInfo projectInfo = (ProjectInfo)query.list().get(0);
+		tx.commit();
+		session.close();
+		return projectInfo;
+	}
+
+
+
+	@Override
+	public int update(ProjectInfo projectInfo) {
+		// TODO Auto-generated method stub
+		if(projectInfo == null){
+			return 0;
+		}else
+		{
+			this.getHibernateTemplate().update(projectInfo);
+			return 1;
+		}
+	}
+
+
+
+	@Override
+	public ProjectInfo selectProject(int projectId) {
+		// TODO Auto-generated method stub
+		String hql = "from ProjectInfo where id=" + projectId;
+		List<ProjectInfo> list = this.getHibernateTemplate().find(hql);
+		if(list.size() != 0){
+			ProjectInfo projectInfo = list.get(0);
+			return projectInfo;
+		}
+		else{
+			return null;
+		}
 	}
 }

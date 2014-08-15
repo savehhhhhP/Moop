@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ImportDrivers">
+		<item value="false" key="ImportDriverProfileWizardPage.SOURCE_WORKSPACE_SELECTED"/>
+		<item value="true" key="ImportDriverProfileWizardPage.SOURCE_FILE_SELECTED"/>
+		<list key="ImportDriverProfileWizardPage.SOURCE_FILE_NAMES">
+			<item value="C:\Users\save\Desktop\sqlserver.xml"/>
+		</list>
+	</section>
+</section>

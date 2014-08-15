@@ -1,0 +1,26 @@
+#Thu Aug 14 09:40:35 CST 2014
+myeclipseTomcatServer.MoopSystem.isDeployed=true
+tomcat7Server.MoopSystem.isExploded=true
+myeclipseTomcatServer.MoopSystem.isUptoDate=true
+tomcat7Server.MoopSystem.deployIsOverProject=false
+myeclipseTomcatServer.MoopSystem.altContextRoot=
+myeclipseTomcatServer.MoopSystem.shouldBackup=false
+tomcat7Server.MoopSystem.noFileCopy=false
+tomcat7Server.MoopSystem.type=WebDeployment
+tomcat7Server.MoopSystem.altContextRoot=
+tomcat7Server.MoopSystem.contextRoot=/MoopSystem
+tomcat7Server.MoopSystem.deploymentPath=D\:\\Tomcat 7.0\\webapps\\MoopSystem
+myeclipseTomcatServer.MoopSystem.noFileCopy=false
+eclipse.preferences.version=1
+tomcat7Server.MoopSystem.shouldOverwrite=false
+tomcat7Server.MoopSystem.shouldBackup=false
+tomcat7Server.MoopSystem.IEARProjectName=
+myeclipseTomcatServer.MoopSystem.deploymentPath=E\:\\github moop\\Moop\\.metadata\\.me_tcat\\webapps\\MoopSystem
+myeclipseTomcatServer.MoopSystem.isExploded=true
+myeclipseTomcatServer.MoopSystem.shouldOverwrite=false
+myeclipseTomcatServer.MoopSystem.deployIsOverProject=false
+tomcat7Server.MoopSystem.isDeployed=true
+myeclipseTomcatServer.MoopSystem.IEARProjectName=
+tomcat7Server.MoopSystem.isUptoDate=true
+myeclipseTomcatServer.MoopSystem.type=WebDeployment
+myeclipseTomcatServer.MoopSystem.contextRoot=/MoopSystem

@@ -67,21 +67,19 @@ public class GetManageProjectListAction extends ActionSupport{
 				Map map = new HashMap();
 				map.put("id", p.getId());
 				map.put("name", p.getName());
-				map.put("number", p.getNumber());
-				map.put("type", p.getProjectType().getName());
-				map.put("enterprise", p.getEnterpriseName());
-				map.put("startDate", p.getStartDate());
-				map.put("endDate", p.getEndDate());
-				map.put("funds", p.getFunds());
-				map.put("isPublic", p.getIsPublic());
-				map.put("state", p.getProjectState().getName());
+				//map.put("number", p.getNumber());
+				//map.put("type", p.getProjectType().getName());
+				//map.put("enterprise", p.getEnterpriseName());
+//				map.put("startDate", p.getStartDate());
+//				map.put("endDate", p.getEndDate());
+//				map.put("funds", p.getFunds());
+//				map.put("isPublic", p.getIsPublic());
+//				map.put("state", p.getProjectState().getName());
 				map.put("introduction", p.getIntroduction());
 				map.put("picturepath", p.getPicturePath());
 				projectData.add(map);
 				
 			}
-			HttpServletRequest request = ServletActionContext.getRequest();
-			request.setAttribute("project", projectData);
 			
 			JSONArray jsonList = JSONArray.fromObject(projectData);
 			System.out.println(jsonList.toString());
@@ -96,4 +94,5 @@ public class GetManageProjectListAction extends ActionSupport{
 		return null;
 		
 	}
+
 }

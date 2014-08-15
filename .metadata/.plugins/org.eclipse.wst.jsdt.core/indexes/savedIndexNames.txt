@@ -1,0 +1,6 @@
+INDEX VERSION 1.122+E:\github moop\Moop\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3642194180.index
+2730810734.index
+2508984070.index
+3091153447.index
+4826366.index

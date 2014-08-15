@@ -9,4 +9,7 @@ public interface ProjectDAO {
 	public Integer findByName(String projectName);
 	public List<ProjectInfo> selectMyProject(int masterId);
 	public List<ProjectInfo> selectLatestProject();
+	public ProjectInfo selectProjectInfo(int projectId);
+	public int update(ProjectInfo projectInfo);
+	public ProjectInfo selectProject(int projectId);
 }

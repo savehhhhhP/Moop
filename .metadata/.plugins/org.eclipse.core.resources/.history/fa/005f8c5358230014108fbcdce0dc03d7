@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<!-- 指定连接数据库的驱动 -->
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<!-- 指定连接数据库的URL -->
+		<property name="url"
+			value="jdbc:sqlserver://localhost:1433;DatabaseName=MOOP" />
+		<!-- 指定连接数据库的用户名 -->
+		<property name="username" >
+			<value>sa</value>
+		</property>
+		<!-- 指定连接数据库的密码 -->
+		<property name="password">
+            <value>sa</value>
+        </property>
+         <property name="maxActive" value="100"></property>
+        <!--最大空闲连接 -->
+        <property name="maxIdle" value="30"></property>
+        <!-- 最大等待连接 -->
+        <property name="maxWait" value="500"></property>
+        <!-- 默认最大提交，TRUE，每操作一次数据库自动提交 
+        <property name="defaultAutoCommit" value="true"></property>-->
+        
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- 数据源 -->
+		<property name="dataSource">
+			<ref bean="dataSource"/> 
+		</property>
+		
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+
+<!-- 		<property name="mappingResources">
+		</property> -->
+	</bean>
+
+  <!--   <bean id="userDAO" class="dao.UserDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"></ref>
+		</property>
+	</bean> -->
+
+
+	<bean id="userDAO" class="dao.UserDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="userService" class="service.UserServiceImpl">
+		<property name="userDAO">
+			<ref bean="userDAO"></ref>
+		</property>
+	</bean>
+
+	<bean id="login" class="action.LoginAction">
+		<property name="userService">
+			<ref bean="userService"></ref>
+		</property>
+	</bean>
+	
+	<bean id="register" class="action.RegisterAction">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="projectTypeDAO" class="dao.ProjectTypeDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="projectTypeService" class="service.ProjectTypeServiceImpl">
+		<property name="projectTypeDAO">
+			<ref bean="projectTypeDAO"></ref>
+		</property>
+	</bean>
+
+	<bean id="getprojecttype" class="action.GetProjectTypeAction">
+		<property name="projectTypeService">
+			<ref bean="projectTypeService" />
+		</property>
+	</bean>
+	
+	
+	<bean id="enterpriseDAO" class="dao.EnterpriseDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="enterpriseService" class="service.EnterpriseServiceImpl">
+		<property name="enterpriseDAO">
+			<ref bean="enterpriseDAO"></ref>
+		</property>
+	</bean>
+
+	<bean id="getprojectenterprise" class="action.GetEnterpriseAction">
+		<property name="enterpriseService">
+			<ref bean="enterpriseService" />
+		</property>
+	</bean>
+	
+	<bean id="projectStateDAO" class="dao.ProjectStateDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="projectStateService" class="service.ProjectStateServiceImpl">
+		<property name="projectStateDAO">
+			<ref bean="projectStateDAO"></ref>
+		</property>
+	</bean>
+
+	<bean id="getprojectstate" class="action.GetProjectStateAction">
+		<property name="projectStateService">
+			<ref bean="projectStateService" />
+		</property>
+	</bean>
+	
+	<bean id="projectDAO" class="dao.ProjectDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="projectService" class="service.ProjectServiceImpl">
+		<property name="projectDAO">
+			<ref bean="projectDAO"></ref>
+		</property>
+	</bean>
+	
+	<bean id="uploadImageFile" class="function.UploadImageFileImpl">
+	</bean>
+	
+	<bean id="createnewproject" class="action.CreateNewProjectAction">
+		<property name="projectService">
+			<ref bean="projectService" />
+		</property>
+		<property name="uploadImageFile">
+		<ref bean="uploadImageFile"/>
+		</property>
+	</bean>
+	
+	<bean id="getmanageprojectlist" class="action.GetManageProjectListAction">
+	<property name="projectService">
+			<ref bean="projectService" />
+		</property>
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+	</bean>
+	
+	<bean id="displayindexpage" class="action.GetIndexPageInfoAction">
+	<property name="projectService">
+	<ref bean ="projectService"/>
+	</property>
+	</bean>
+	
+	<bean id="getProjectInfo" class="action.RedirectManageProject"></bean>
+	
+	
+	
+</beans>

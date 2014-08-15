@@ -42,4 +42,22 @@ public class ProjectServiceImpl implements ProjectService{
 		return projectDAO.selectLatestProject();
 	}
 
+	@Override
+	public ProjectInfo selectProjectInfo(int projectId) {
+		// TODO Auto-generated method stub
+		return projectDAO.selectProjectInfo(projectId);
+	}
+
+	@Override
+	public int update(ProjectInfo projectInfo) {
+		// TODO Auto-generated method stub
+		return projectDAO.update(projectInfo);
+	}
+
+	@Override
+	public ProjectInfo selectProject(int projectId) {
+		// TODO Auto-generated method stub
+		return projectDAO.selectProject(projectId);
+	}
+
 }

@@ -144,6 +144,18 @@
 		<property name="projectService">
 			<ref bean="projectService" />
 		</property>
+		<property name="userService">
+		<ref bean="userService"/>
+		</property>
+		<property name="enterpriseService">
+		<ref bean="enterpriseService"/>
+		</property>
+		<property name="projectTypeService">
+		<ref bean="projectTypeService"/>
+		</property>
+		<property name="projectStateService">
+		<ref bean="projectStateService"/>
+		</property>
 		<property name="uploadImageFile">
 		<ref bean="uploadImageFile"/>
 		</property>
@@ -164,10 +176,24 @@
 	</property>
 	</bean>
 	
-	<bean id="getProjectInfo" class="action.RedirectManageProject"></bean>
+	<bean id="getmanageprojectinfo" class="action.GetManageProjectInfoAction">
+	<property name="projectService">
+	<ref bean="projectService"></ref></property>
+	</bean>
 	
-	
-	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"></bean>
-	
+	<bean id="updateproject" class="action.UpdateProjectAction">
+	<property name="projectService">
+	<ref bean="projectService"></ref>
+	</property>
+	<property name="enterpriseService">
+	<ref bean="enterpriseService"/>
+	</property>
+	<property name="projectTypeService">
+	<ref bean="projectTypeService"/>
+	</property>
+	<property name="projectStateService">
+	<ref bean="projectStateService"/>
+	</property>
+	</bean>
 	
 </beans>
