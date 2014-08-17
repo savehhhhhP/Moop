@@ -3,10 +3,11 @@
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="service.ProjectService"/>
 <fullyQualifiedTypeName name="domain.ProjectInfo"/>
-<fullyQualifiedTypeName name="service.EnterpriseService"/>
 <fullyQualifiedTypeName name="service.ProjectTypeService"/>
 <fullyQualifiedTypeName name="service.ProjectStateService"/>
-<fullyQualifiedTypeName name="domain.Enterprise"/>
 <fullyQualifiedTypeName name="domain.ProjectType"/>
 <fullyQualifiedTypeName name="domain.ProjectState"/>
+<fullyQualifiedTypeName name="service.EnterpriseService"/>
+<fullyQualifiedTypeName name="service.UserService"/>
+<fullyQualifiedTypeName name="domain.Enterprise"/>
 </qualifiedTypeNameHistroy>

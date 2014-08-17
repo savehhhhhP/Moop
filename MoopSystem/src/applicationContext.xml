@@ -65,8 +65,11 @@
 	</bean>
 	
 	<bean id="register" class="action.RegisterAction">
-		<property name="sessionFactory">
-			<ref bean="sessionFactory"/>
+		<property name="userService">
+			<ref bean="userService"/>
+		</property>
+		<property name="enterpriseService">
+		<ref bean="enterpriseService"/>
 		</property>
 	</bean>
 	

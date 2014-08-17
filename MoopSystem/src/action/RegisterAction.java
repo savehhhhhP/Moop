@@ -6,8 +6,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import service.EnterpriseService;
+import service.UserService;
+
 import com.opensymphony.xwork2.ActionSupport;
 
+import domain.Enterprise;
 import domain.UserInfo;
 
 public class RegisterAction extends ActionSupport{
@@ -19,8 +23,19 @@ public class RegisterAction extends ActionSupport{
 	private String _userPsw1;
 	private String _userPsw2;
 	private String _userEmail;
+	private String _enterprise;
 	
-	private SessionFactory sessionFactory;
+	EnterpriseService enterpriseService;
+	UserService userService;
+	
+	public String get_enterprise() {
+		return _enterprise;
+	}
+
+	public void set_enterprise(String _enterprise) {
+		this._enterprise = _enterprise;
+	}
+
 	public String get_Nickname() {
 		return _nickname;
 	}
@@ -56,15 +71,27 @@ public class RegisterAction extends ActionSupport{
 		this._userEmail = _userEmail;
 	}
 
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
-
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	
+	
+	
+
+	public EnterpriseService getEnterpriseService() {
+		return enterpriseService;
+	}
+
+	public void setEnterpriseService(EnterpriseService enterpriseService) {
+		this.enterpriseService = enterpriseService;
+	}
+
+	public UserService getUserService() {
+		return userService;
+	}
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
 	}
 
 	public String execute() throws Exception{
@@ -74,24 +101,10 @@ public class RegisterAction extends ActionSupport{
 			return ERROR;
 		}
 
-		Session session = sessionFactory.openSession();
-		Transaction tx =null;
 
-		UserInfo stu = new UserInfo(_nickname,_userEmail, _userPsw1);
-		
-		stu.setId(1);
-		System.out.println("_nickname : "+_nickname+ stu.toString());
-		try {  
-			tx =session.beginTransaction();
-			session.save(stu);
-			tx.commit();  
-		} catch (Exception e) {  
-			tx.rollback();  
-			e.printStackTrace();  
-			return ERROR;
-		}finally{  
-			session.close();  
-		}  
+		Enterprise enterprise = enterpriseService.findByName(_enterprise);
+		UserInfo stu = new UserInfo(_nickname,_userEmail, _userPsw1, enterprise);
+		userService.save(stu);
 		return SUCCESS;
 	}
 

@@ -59,7 +59,7 @@ $('project.state').ready(
 			});
 		});
 
-function selectfile(obj) {
+function selectfile() {
 	document.getElementById(1).click();
 
 }
@@ -110,7 +110,6 @@ function readFileFirefox(fileBrowser) {
 // IE获取文件全路径方法
 function readFileIE(fileBrowser) {
 	var path = fileBrowser.value;
-	alert("path is " + path);
 	document.getElementById("project.picturePath").value = path;
 
 }

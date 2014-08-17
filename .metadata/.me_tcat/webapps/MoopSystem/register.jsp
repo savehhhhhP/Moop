@@ -19,6 +19,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="">
 <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+<script src="js/jquery/jquery1.83.js"></script>
+<script src="js/createnewproject.js"></script>
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet">
 
@@ -71,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<center style="background:#EAEAEA">
 		<div class="container">
 			<div class="row row-6"
-				style="margin-top:80px;height:600px;width:700px;">
+				style="margin-top:80px;height:720px;width:700px;">
 
 
 				<div class="panel panel-default panel-page" style="margin-left:0;text-align:left;">
@@ -95,6 +98,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										data-url="/register/nickname/check" data-widget-cid="widget-4"
 										data-explain="该怎么称呼你？ 中、英文均可，最长14个英文或7个汉字">
 									<p class="help-block">该怎么称呼你？ 中、英文均可，最长20个英文或10个汉字</p>
+								</div>
+							</div>
+							
+							
+							<div class="form-group">
+								<label class="control-label required" for="register_enterprise">单位</label>
+								<div class="controls">
+									<select id="project.enterprise" required="required"
+										name="_enterprise" class="form-control"
+										 data-widget-cid="widget-4"
+										data-explain="单位名称?">
+										<option>---请选择---</option></select>
+									<p class="help-block">请选择单位名称</p>
 								</div>
 							</div>
 

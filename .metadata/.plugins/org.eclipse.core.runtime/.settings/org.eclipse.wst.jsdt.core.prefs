@@ -1,3 +1,4 @@
-#Thu Aug 14 08:56:51 CST 2014
+#Fri Aug 15 16:27:00 CST 2014
 eclipse.preferences.version=1
+org.eclipse.wst.jsdt.core.timeoutForParameterNameFromAttachedJavadoc=50
 org.eclipse.wst.jsdt.core.codeComplete.visibilityCheck=enabled
