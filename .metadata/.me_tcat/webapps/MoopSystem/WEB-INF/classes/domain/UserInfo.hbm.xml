@@ -17,7 +17,7 @@
             <column name="NationID" />
         </many-to-one>
         <many-to-one name="enterprise" class="domain.Enterprise" fetch="select">
-            <column name="EnterpriseID" />
+            <column name="EnterpriseID" not-null="true" />
         </many-to-one>
         <property name="name" type="string">
             <column name="Name" not-null="true" />
@@ -78,7 +78,7 @@
         </set>
         <set name="projectInfos" inverse="true">
             <key>
-                <column name="MasterID" />
+                <column name="MasterID" not-null="true" />
             </key>
             <one-to-many class="domain.ProjectInfo" />
         </set>
@@ -102,7 +102,7 @@
         </set>
         <set name="documents" inverse="true">
             <key>
-                <column name="userID" not-null="true" />
+                <column name="UserID" not-null="true" />
             </key>
             <one-to-many class="domain.Document" />
         </set>
@@ -120,7 +120,7 @@
         </set>
         <set name="thesises" inverse="true">
             <key>
-                <column name="AuthorID" not-null="true" />
+                <column name="UserID" not-null="true" />
             </key>
             <one-to-many class="domain.Thesis" />
         </set>

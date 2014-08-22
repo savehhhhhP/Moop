@@ -1,3 +1,9 @@
-#Wed Aug 13 23:06:52 CST 2014
+#Mon Aug 18 21:57:41 CST 2014
+com.genuitec.eclipse.hibernate.JAVA_PACKAGE=domain
+com.genuitec.eclipse.hibernate.FORCE_FOREIGN=false
 me.pref.version=4.1
 eclipse.preferences.version=1
+com.genuitec.eclipse.hibernate.FORCE_PRIMARY=false
+com.genuitec.eclipse.hibernate.UPDATE_CONFIG=false
+com.genuitec.eclipse.hibernate.GEN_ABSTRACT=false
+com.genuitec.eclipse.hibernate.JAVA_FOLDER=/MoopSystem/src

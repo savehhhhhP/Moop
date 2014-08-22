@@ -12,11 +12,13 @@ public class Document implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
+	private ProjectInfo projectInfo;
 	private UserInfo userInfo;
 	private String name;
 	private String keyWords;
-	private String abstract_;
+	private String abstractContent;
 	private String author;
+	private String documentPath;
 	private Set reProjectDocuments = new HashSet(0);
 	private Set reProjectDocumentUsers = new HashSet(0);
 
@@ -27,24 +29,30 @@ public class Document implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Document(UserInfo userInfo, String name, String keyWords,
-			String abstract_, String author) {
+	public Document(ProjectInfo projectInfo, UserInfo userInfo, String name,
+			String keyWords, String abstractContent, String author,
+			String documentPath) {
+		this.projectInfo = projectInfo;
 		this.userInfo = userInfo;
 		this.name = name;
 		this.keyWords = keyWords;
-		this.abstract_ = abstract_;
+		this.abstractContent = abstractContent;
 		this.author = author;
+		this.documentPath = documentPath;
 	}
 
 	/** full constructor */
-	public Document(UserInfo userInfo, String name, String keyWords,
-			String abstract_, String author, Set reProjectDocuments,
+	public Document(ProjectInfo projectInfo, UserInfo userInfo, String name,
+			String keyWords, String abstractContent, String author,
+			String documentPath, Set reProjectDocuments,
 			Set reProjectDocumentUsers) {
+		this.projectInfo = projectInfo;
 		this.userInfo = userInfo;
 		this.name = name;
 		this.keyWords = keyWords;
-		this.abstract_ = abstract_;
+		this.abstractContent = abstractContent;
 		this.author = author;
+		this.documentPath = documentPath;
 		this.reProjectDocuments = reProjectDocuments;
 		this.reProjectDocumentUsers = reProjectDocumentUsers;
 	}
@@ -57,6 +65,14 @@ public class Document implements java.io.Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public ProjectInfo getProjectInfo() {
+		return this.projectInfo;
+	}
+
+	public void setProjectInfo(ProjectInfo projectInfo) {
+		this.projectInfo = projectInfo;
 	}
 
 	public UserInfo getUserInfo() {
@@ -83,12 +99,12 @@ public class Document implements java.io.Serializable {
 		this.keyWords = keyWords;
 	}
 
-	public String getAbstract_() {
-		return this.abstract_;
+	public String getAbstractContent() {
+		return this.abstractContent;
 	}
 
-	public void setAbstract_(String abstract_) {
-		this.abstract_ = abstract_;
+	public void setAbstractContent(String abstractContent) {
+		this.abstractContent = abstractContent;
 	}
 
 	public String getAuthor() {
@@ -97,6 +113,14 @@ public class Document implements java.io.Serializable {
 
 	public void setAuthor(String author) {
 		this.author = author;
+	}
+
+	public String getDocumentPath() {
+		return this.documentPath;
+	}
+
+	public void setDocumentPath(String documentPath) {
+		this.documentPath = documentPath;
 	}
 
 	public Set getReProjectDocuments() {

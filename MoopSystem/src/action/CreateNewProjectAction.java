@@ -254,7 +254,7 @@ public class CreateNewProjectAction extends ActionSupport {
 		
 
 		// 文件上传部分
-		_projectPicturePath = uploadImageFile.uploadFile(userInfo.getEmail(), file, this.getFileFileName(), 245, 143);
+		_projectPicturePath = uploadImageFile.uploadFile(userInfo.getEmail(), "", file, this.getFileFileName(), 245, 143);
 		projectInfo.setPicturePath(_projectPicturePath);
 		projectService.save(projectInfo);
 		return SUCCESS;

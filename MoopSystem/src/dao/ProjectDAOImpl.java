@@ -2,6 +2,8 @@ package dao;
 
 import java.util.List;
 
+import net.sf.json.JSONArray;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -71,14 +73,17 @@ public class ProjectDAOImpl extends HibernateDaoSupport implements ProjectDAO {
 		Session session = this.getHibernateTemplate().getSessionFactory()
 				.openSession();
 		Transaction tx = session.beginTransaction();
-		Query query = session
-				.createQuery("select new domain.ProjectInfo(name,introduction,picturePath) from ProjectInfo order by id desc");
+		try{Query query = session
+				.createQuery("select new domain.ProjectInfo(c.name,c.introduction,c.picturePath) from ProjectInfo c order by c.id desc");
 		query.setMaxResults(4);
 		List<ProjectInfo> projectInfoList = query.list();
 		tx.commit();
 		session.close();
 		return projectInfoList;
-
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return null;
 		/*
 		 * String hql = "from ProjectInfo"; HibernateTemplate temp =
 		 * getHibernateTemplate(); try{ List<ProjectInfo> result =

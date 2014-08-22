@@ -71,11 +71,6 @@ public class RegisterAction extends ActionSupport{
 		this._userEmail = _userEmail;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
-	
 	
 
 	public EnterpriseService getEnterpriseService() {
@@ -103,7 +98,7 @@ public class RegisterAction extends ActionSupport{
 
 
 		Enterprise enterprise = enterpriseService.findByName(_enterprise);
-		UserInfo stu = new UserInfo(_nickname,_userEmail, _userPsw1, enterprise);
+		UserInfo stu = new UserInfo(enterprise, _nickname,_userEmail, _userPsw1);
 		userService.save(stu);
 		return SUCCESS;
 	}

@@ -25,7 +25,7 @@ public class UploadImageFileImpl implements UploadFile{
 	 * @see function.UploadFile#uploadFile(java.lang.String, java.io.File, java.lang.String)
 	 */
 	@Override
-	public String uploadFile(String email, File file, String fileName, int width, int height) {
+	public String uploadFile(String email, String projectId, File file, String fileName, int width, int height) {
 		// TODO Auto-generated method stub
 		
 		

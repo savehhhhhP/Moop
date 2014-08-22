@@ -52,7 +52,7 @@
 					<div class="col-md-12">
 						<div>
 							<h1 class="title">
-								<s:property value='projectInfo.id' />
+								<s:property value='projectInfo.name' />
 							</h1>
 						</div>
 					</div>
@@ -92,102 +92,99 @@
 									<!-- 项目基本信息 -->
 
 									<div class="tab-pane active" style="margin-top:10px;" id="home">
-										<form id="updateproject-form" method="post"
+										<form id="updateprojectForm" method="post"
 											enctype="multipart/form-data" action="updateproject.action">
-											<input type="hidden" name="id"
+											<input type="hidden" name="id" id="id"
 												value="<s:property value='projectInfo.id'/>"></input>
-											<div class="tab-pane active" id="home">
-												<!-- class="course-item-list-wrap" -->
-												<ul style="list-style:none;margin-top:7px;"
-													id="course-item-list">
-													<li><label for="name" style="font-weight:normal;">项目名称</label>
-														<input class="form-control" id="name" name="name"
-														style="margin-top:6px;width:90%;display:inline-block;"
-														value=" <s:property value='projectInfo.name'/>"></input></li>
+											<!-- class="course-item-list-wrap" -->
+											<ul style="list-style:none;margin-top:7px;"
+												id="course-item-list">
+												<li><label for="name" style="font-weight:normal;">项目名称</label>
+													<input class="form-control" id="name" name="name"
+													style="margin-top:6px;width:90%;display:inline-block;"
+													value=" <s:property value='projectInfo.name'/>"></input></li>
 
-													<li><label for="number" style="font-weight:normal;">项目编号</label>
-														<input class="form-control"
-														style="margin-top:6px;width:90%;display:inline-block;"
-														id="number" name="number"
-														value="<s:property value='projectInfo.number'/>"></input>
-													</li>
-													<li><label for="type" style="font-weight:normal;">项目类型</label>
-														<select id="type" name="type"
-														style="margin-top:6px;width:90%;display:inline-block;"
-														class="form-control">
-															<option>
-																<s:property value='projectInfo.projectType.name' />
-															</option>
-													</select></li>
-													<li><label for="enterpriseName"
-														style="font-weight:normal;">依托单位</label> <select
-														id="enterpriseName" name="enterpriseName"
-														style="margin-top:6px;width:90%;display:inline-block;"
-														class="form-control">
-															<option>
-																<s:property
-																	value='projectInfo.enterprise.enterpriseName' />
-															</option>
-													</select></li>
-													<li><label for="startDate" style="font-weight:normal;">时间安排</label>
-														<input type="text" id="startDate" name="startDate"
+												<li><label for="number" style="font-weight:normal;">项目编号</label>
+													<input class="form-control"
+													style="margin-top:6px;width:90%;display:inline-block;"
+													id="number" name="number"
+													value="<s:property value='projectInfo.number'/>"></input>
+												</li>
+												<li><label for="type" style="font-weight:normal;">项目类型</label>
+													<select id="type" name="type"
+													style="margin-top:6px;width:90%;display:inline-block;"
+													class="form-control">
+														<option>
+															<s:property value='projectInfo.projectType.name' />
+														</option>
+												</select></li>
+												<li><label for="enterpriseName"
+													style="font-weight:normal;">依托单位</label> <select
+													id="enterpriseName" name="enterpriseName"
+													style="margin-top:6px;width:90%;display:inline-block;"
+													class="form-control">
+														<option>
+															<s:property value='projectInfo.enterprise.enterpriseName' />
+														</option>
+												</select></li>
+												<li><label for="startDate" style="font-weight:normal;">时间安排</label>
+													<input type="text" id="startDate" name="startDate"
+													class="form-control"
+													style="margin-top:6px;width:42.3%;display:inline-block;"
+													onclick="WdatePicker()" data-explain="开始时间"
+													value="<s:property value='projectInfo.startDate'/>">
+													<label>——</label> <input type="text" id="endDate"
+													name="endDate" class="form-control"
+													style="margin-top:6px;width:42.3%;display:inline-block;"
+													onclick="WdatePicker()" data-explain="结束时间"
+													value="<s:property value='projectInfo.endDate'/>">
+												</li>
+
+												<li><label for="funds" style="font-weight:normal;">项目经费</label>
+													<input class="form-control"
+													style="margin-top:6px;width:90%;display:inline-block;"
+													id="funds" name="funds"
+													value="<s:property value='projectInfo.funds'/>"></input>
+												</li>
+												<li><label style="font-weight:normal;" for="isPublic">是否公开</label>
+													<select id="isPublic" name="isPublic"
+													style="margin-top:6px;width:90%;display:inline-block;"
+													class="form-control">
+														<option>
+															<s:property value='projectInfo.isPublic' />
+														</option>
+												</select>
+												</li>
+
+												<li><label style="font-weight:normal;" for="state">项目状态</label>
+													<select id="state"
+													style="margin-top:6px;width:90%;display:inline-block;"
+													name="state" class="form-control">
+														<option>
+															<s:property value='projectInfo.projectState.name' />
+														</option>
+												</select>
+												</li>
+
+												<li><label style="font-weight:normal;margin-top:3px;"
+													for="introduction">项目介绍</label> <textarea id="introduction"
+														required="required" name="introduction"
 														class="form-control"
-														style="margin-top:6px;width:42.3%;display:inline-block;"
-														onclick="WdatePicker()" data-explain="开始时间"
-														value="<s:property value='projectInfo.startDate'/>">
-														<label>——</label> <input type="text" id="endDate"
-														name="endDate" class="form-control"
-														style="margin-top:6px;width:42.3%;display:inline-block;"
-														onclick="WdatePicker()" data-explain="结束时间"
-														value="<s:property value='projectInfo.endDate'/>">
-													</li>
-
-													<li><label for="funds" style="font-weight:normal;">项目经费</label>
-														<input class="form-control"
-														style="margin-top:6px;width:90%;display:inline-block;"
-														id="funds" name="funds"
-														value="<s:property value='projectInfo.funds'/>"></input>
-													</li>
-													<li><label style="font-weight:normal;" for="isPublic">是否公开</label>
-														<select id="isPublic" name="isPublic"
-														style="margin-top:6px;width:90%;display:inline-block;"
-														class="form-control">
-															<option>
-																<s:property value='projectInfo.isPublic' />
-															</option>
-													</select>
-													</li>
-
-													<li><label style="font-weight:normal;" for="state">项目状态</label>
-														<select id="state"
-														style="margin-top:6px;width:90%;display:inline-block;"
-														name="state" class="form-control">
-															<option>
-																<s:property value='projectInfo.projectState.name' />
-															</option>
-													</select>
-													</li>
-
-													<li><label style="font-weight:normal;margin-top:3px;"
-														for="introduction">项目介绍</label> <textarea
-															id="introduction" required="required" name="introduction"
-															class="form-control"
-															style="text-align:left;margin-top:6px;width:90%;display:inline-block; ">
+														style="text-align:left;margin-top:6px;width:90%;display:inline-block; ">
 													<s:property value='projectInfo.introduction' />
 									</textarea></li>
-													<li>
-														<div class="form-group">
-															<div class="controls">
-																<center>
-																	<button type="submit" style="width:30%;" name="save"
-																		id="save" class="btn btn-primary btn-large btn-block">保存修改</button>
+												<li>
+													<div class="form-group">
+														<div class="controls">
+															<center>
+																<button type="submit" style="width:30%;" name="save"
+																	id="save" class="btn btn-primary btn-large btn-block">保存修改</button>
 
-																</center>
-															</div>
+															</center>
 														</div>
-													</li>
-												</ul>
-											</div>
+													</div>
+												</li>
+											</ul>
 										</form>
 									</div>
 									<!-- 成员管理 -->
@@ -211,14 +208,28 @@
 													</tr>
 												</thead>
 												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Mark</td>
-														<td>715620615@qq.com</td>
-														<td>ncepu</td>
-														<td>15811436207</td>
-														<td><a>删除</a></td>
-													</tr>
+													<s:iterator value="reProjectUser" id="reProjectUser"
+														status="st">
+														<tr>
+															<td><s:property value="#st.count"/>
+															</td>
+															<td><s:if test="#reProjectUser.userName==null||''.equals(#reProjectUser.userName)">------</s:if>
+															<s:else><s:property value='#reProjectUser.userName'/></s:else>
+															</td>
+															<td><s:if test="#reProjectUser.userInfo.email==null||''.equals(#reProjectUser.userInfo.email)">------</s:if>
+															<s:else><s:property value='#reProjectUser.userInfo.email'/></s:else>
+															</td>
+															<td><s:if test="#reProjectUser.enterpriseName==null||''.equals(#reProjectUser.enterpriseName)">------</s:if>
+															<s:else><s:property value='#reProjectUser.enterpriseName'/></s:else>
+															</td>
+															<td><s:if
+																	test="#reProjectUser.userInfo.phone==null||
+															''.equals(#reProjectUser.userInfo.phone)">------</s:if>
+															<s:else><s:property value='#reProjectUser.userInfo.phone'/></s:else>
+															</td>
+															<td><a>删除</a></td>
+														</tr>
+													</s:iterator>
 												</tbody>
 											</table>
 										</div>
@@ -234,79 +245,133 @@
 											role="dialog" aria-labelledby="myModalLabel"
 											aria-hidden="true">
 											<div class="modal-dialog">
-												<div class="modal-content">
-													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal"
-															aria-hidden="true">&times;</button>
-														<h4 class="modal-title" id="myModalLabel">上传文件</h4>
-													</div>
 
-													<div class="modal-body">
-														<ul style="list-style:none;margin-top:7px;"
-															id="course-item-list">
-															<li><label for="fileName"
-																style="font-weight:normal;">文件名称</label> <input
-																class="form-control" id="fileName" name="fileName"
-																required="required"
-																style="margin-top:6px;width:80%;display:inline-block;"></input>
-															</li>
+												<form id="uploadFileForm1" method="post"
+													enctype="multipart/form-data" action="uploadfile.action">
+													<div class="modal-content">
+														<div class="modal-header">
+															<button type="button" class="close" data-dismiss="modal"
+																aria-hidden="true">&times;</button>
+															<h4 class="modal-title" id="myModalLabel">上传文件</h4>
+														</div>
 
-															<li><label for="fileType"
-																style="font-weight:normal;">文件类型</label>
-																<div id="type"
+														<div class="modal-body">
+															<ul style="list-style:none;margin-top:7px;"
+																id="course-item-list">
+																<li><input type="hidden" name="projectId"
+																	value="<s:property value='projectInfo.id'/>"></input></li>
+
+															<!--  	<li><label for="fileName"
+																	style="font-weight:normal;">文件名称</label> <input
+																	class="form-control" id="fileName" name="fileName"
+																	required="required"
+																	style="margin-top:6px;width:80%;display:inline-block;"></input>
+																</li>-->
+
+																<li><label for="fileType"
+																	style="font-weight:normal;">文件类型</label> <select
+																	class="form-control" id="fileType" name="fileType"
+																	required="required"
 																	style="margin-top:6px;width:80%;display:inline-block;">
-																	<select class="form-control" id="fileType"
-																		name="fileType" required="required">
 																		<option value="-1">---请选择---</option>
 																		<option value="document">文档资料</option>
 																		<option value="patent">专利</option>
 																		<option value="thesis">论文</option>
-																	</select>
-																</div>
-															</li>
-															<li id="patentTitle" style="display: none;">
-																<label for="fileType"
-																style="font-weight:normal;">专利题目</label>
-																<div id="type"
-																	style="margin-top:6px;width:80%;display:inline-block;">
-																	<input id="fileName" />
-																</div>
-															</li>
-															<li><label for="fileKeywords"
-																style="font-weight:normal;">关键词语</label> <input
-																class="form-control" id="fileKeywords"
-																name="fileKeywords" required="required"
-																style="margin-top:6px;width:80%;display:inline-block;"></input>
-															</li>
+																</select>
+																</li>
 
 
-															<li><label for="fileDescription"
-																style="font-weight:normal;">文件描述</label> <textarea
-																	class="form-control" id="fileDescription"
-																	name="fileDescription" required="required"
-																	style="margin-top:6px;width:80%;min-height:100px;display:inline-block;"></textarea>
-															</li>
+																<li id="patentNumLi" style="display: none;"><label
+																	for="patentNum" style="font-weight:normal;">专利号码</label>
+																	<input id="patentNum" class="form-control"
+																	name="patentNum" required="required"
+																	style="margin-top:6px;width:80%;display:inline-block;" />
+																</li>
 
-															<li><label for="1" style="font-weight:normal;">选择文件</label>
-																<input type="text" class="form-control" id="filePath"
-																name="filePath" required="required"
-																style="margin-top:6px;width:64%;display:inline-block;" />
-																<input type="file" name="file" id="1"
-																onchange="readFile(this)" id="filePath" name="filePath"
-																style="display:none;" />
-																<button type="button" id="btnSelect" name="btnSelect"
-																	onclick="selectfile()" class="btn btn-primary">选择文件</button>
-															</li>
-														</ul>
+																<li id="patentDateLi" style="display: none;"><label
+																	for="patentDate" style="font-weight:normal;">申请日期</label>
+																	<input id="patentDate" class="form-control"
+																	required="required" name="patentDate"
+																	style="margin-top:6px;width:80%;display:inline-block;"
+																	onclick="WdatePicker()" />
+																</li>
 
+																<li id="patentOrgLi" style="display: none;"><label
+																	for="patentOrg" style="font-weight:normal;">机构名称</label>
+																	<input id="patentOrg" class="form-control"
+																	name="patentOrg" required="required"
+																	style="margin-top:6px;width:80%;display:inline-block;" />
+																</li>
+
+
+
+																<li id="thesisOrgLi" style="display: none;"><label
+																	for="thesisOrg" style="font-weight:normal;">出版机构</label>
+																	<input id="thesisOrg" class="form-control"
+																	name="thesisOrg" required="required"
+																	style="margin-top:6px;width:80%;display:inline-block;" />
+																</li>
+
+																<li id="thesisDateLi" style="display: none;"><label
+																	for="thesisDate" style="font-weight:normal;">出版日期</label>
+																	<input id="thesisDate" class="form-control"
+																	name="thesisDate" required="required"
+																	style="margin-top:6px;width:80%;display:inline-block;"
+																	onclick="WdatePicker()" />
+																</li>
+
+																<li id="thesisPaginationLi" style="display: none;"><label
+																	for="thesisPagination" style="font-weight:normal;">论文页码</label>
+																	<input id="thesisPagination" class="form-control"
+																	name="thesisPagination" required="required"
+																	style="margin-top:6px;width:80%;display:inline-block;" />
+																</li>
+
+
+																<li><label for="fileKeywords"
+																	style="font-weight:normal;">关键词语</label> <input
+																	class="form-control" id="fileKeyWords"
+																	name="fileKeyWords" required="required"
+																	style="margin-top:6px;width:80%;display:inline-block;"></input>
+																</li>
+
+
+																<li><label for="fileDescription"
+																	style="font-weight:normal;">文件描述</label> <textarea
+																		class="form-control" id="fileDescription"
+																		name="fileDescription" required="required"
+																		style="margin-top:6px;width:80%;min-height:100px;display:inline-block;"></textarea>
+																</li>
+
+
+
+																<li><label for="fileAuthor"
+																	style="font-weight:normal;">文件作者</label> <input
+																	class="form-control" id="fileAuthor" name="fileAuthor"
+																	required="required"
+																	style="margin-top:6px;width:80%;display:inline-block;"></input>
+																</li>
+
+																<li><label for="1" style="font-weight:normal;">选择文件</label>
+																	<input type="text" class="form-control" id="filePath"
+																	name="filePath" required="required"
+																	style="margin-top:6px;width:64%;display:inline-block;" />
+																	<input type="file" name="file" id="1"
+																	onchange="readFile(this)" style="display:none;" />
+																	<button type="button" id="btnSelect" name="btnSelect"
+																		onclick="selectfile()" class="btn btn-primary">选择文件</button>
+																</li>
+															</ul>
+														</div>
+
+														<div class="modal-footer">
+															<button type="button" class="btn btn-default"
+																data-dismiss="modal">Close</button>
+															<button id="formSummitButton" type="submit"
+																class="btn btn-primary">确定</button>
+														</div>
 													</div>
-
-													<div class="modal-footer">
-														<button type="button" class="btn btn-default"
-															data-dismiss="modal">Close</button>
-														<button type="button" class="btn btn-primary">确定</button>
-													</div>
-												</div>
+												</form>
 												<!-- /.modal-content -->
 											</div>
 											<!-- /.modal-dialog -->
@@ -317,19 +382,14 @@
 
 
 
-										<ul class="media-list" style="margin-top:10px;">
-											<li class="media">
-												<div class="media-body">
-													<div class="mbs">
-														<a href="" target="_blank">resource 1.pdf</a>
-													</div>
-													<div class="text-sm">
-														<a class="link-muted" href="">project 1</a> <span
-															class="bullet">•</span> <span class="text-muted">上传于01-14</span>
-														<span class="bullet">•</span> <span class="text-muted">论文</span>
-													</div>
-
-												</div></li>
+										<ul id="patentList" class="media-list"
+											style="margin-top:10px;">
+										</ul>
+										<ul id="thesisList" class="media-list"
+											style="margin-top:10px;">
+										</ul>
+										<ul id="documentList" class="media-list"
+											style="margin-top:10px;">
 										</ul>
 									</div>
 

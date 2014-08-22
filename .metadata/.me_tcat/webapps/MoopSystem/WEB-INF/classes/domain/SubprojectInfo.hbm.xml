@@ -13,12 +13,9 @@
         <many-to-one name="userInfo" class="domain.UserInfo" fetch="select">
             <column name="MasterID" not-null="true" />
         </many-to-one>
-        <many-to-one name="projectInfo" class="domain.ProjectInfo" fetch="select">
+        <property name="projectId" type="integer">
             <column name="ProjectID" not-null="true" />
-        </many-to-one>
-        <many-to-one name="enterprise" class="domain.Enterprise" fetch="select">
-            <column name="EnterpriseID" not-null="true" />
-        </many-to-one>
+        </property>
         <property name="name" type="string">
             <column name="Name" not-null="true" />
         </property>
@@ -27,6 +24,9 @@
         </property>
         <property name="masterName" type="string">
             <column name="MasterName" not-null="true" />
+        </property>
+        <property name="enterpriseId" type="integer">
+            <column name="EnterpriseID" not-null="true" />
         </property>
         <property name="enterpriseName" type="string">
             <column name="EnterpriseName" not-null="true" />
@@ -87,7 +87,7 @@
         </set>
         <set name="reProjectPatents" inverse="true">
             <key>
-                <column name="SubprojectID" not-null="true" />
+                <column name="SubprojectID" />
             </key>
             <one-to-many class="domain.ReProjectPatent" />
         </set>

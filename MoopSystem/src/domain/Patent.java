@@ -1,6 +1,5 @@
 package domain;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,13 +12,16 @@ public class Patent implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
+	private ProjectInfo projectInfo;
 	private UserInfo userInfo;
 	private String patentNum;
-	private Date applyDate;
+	private String applyDate;
 	private String author;
 	private String keyWords;
-	private String abstract_;
+	private String abstractContent;
 	private String organization;
+	private String name;
+	private String patentPath;
 	private Set reProjectPatentUsers = new HashSet(0);
 
 	// Constructors
@@ -29,29 +31,37 @@ public class Patent implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Patent(UserInfo userInfo, String patentNum, Date applyDate,
-			String author, String keyWords, String abstract_,
-			String organization) {
+	public Patent(ProjectInfo projectInfo, UserInfo userInfo, String patentNum,
+			String applyDate, String author, String keyWords,
+			String abstractContent, String organization, String name,
+			String patentPath) {
+		this.projectInfo = projectInfo;
 		this.userInfo = userInfo;
 		this.patentNum = patentNum;
 		this.applyDate = applyDate;
 		this.author = author;
 		this.keyWords = keyWords;
-		this.abstract_ = abstract_;
+		this.abstractContent = abstractContent;
 		this.organization = organization;
+		this.name = name;
+		this.patentPath = patentPath;
 	}
 
 	/** full constructor */
-	public Patent(UserInfo userInfo, String patentNum, Date applyDate,
-			String author, String keyWords, String abstract_,
-			String organization, Set reProjectPatentUsers) {
+	public Patent(ProjectInfo projectInfo, UserInfo userInfo, String patentNum,
+			String applyDate, String author, String keyWords,
+			String abstractContent, String organization, String name,
+			String patentPath, Set reProjectPatentUsers) {
+		this.projectInfo = projectInfo;
 		this.userInfo = userInfo;
 		this.patentNum = patentNum;
 		this.applyDate = applyDate;
 		this.author = author;
 		this.keyWords = keyWords;
-		this.abstract_ = abstract_;
+		this.abstractContent = abstractContent;
 		this.organization = organization;
+		this.name = name;
+		this.patentPath = patentPath;
 		this.reProjectPatentUsers = reProjectPatentUsers;
 	}
 
@@ -63,6 +73,14 @@ public class Patent implements java.io.Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public ProjectInfo getProjectInfo() {
+		return this.projectInfo;
+	}
+
+	public void setProjectInfo(ProjectInfo projectInfo) {
+		this.projectInfo = projectInfo;
 	}
 
 	public UserInfo getUserInfo() {
@@ -81,11 +99,11 @@ public class Patent implements java.io.Serializable {
 		this.patentNum = patentNum;
 	}
 
-	public Date getApplyDate() {
+	public String getApplyDate() {
 		return this.applyDate;
 	}
 
-	public void setApplyDate(Date applyDate) {
+	public void setApplyDate(String applyDate) {
 		this.applyDate = applyDate;
 	}
 
@@ -105,12 +123,12 @@ public class Patent implements java.io.Serializable {
 		this.keyWords = keyWords;
 	}
 
-	public String getAbstract_() {
-		return this.abstract_;
+	public String getAbstractContent() {
+		return this.abstractContent;
 	}
 
-	public void setAbstract_(String abstract_) {
-		this.abstract_ = abstract_;
+	public void setAbstractContent(String abstractContent) {
+		this.abstractContent = abstractContent;
 	}
 
 	public String getOrganization() {
@@ -119,6 +137,22 @@ public class Patent implements java.io.Serializable {
 
 	public void setOrganization(String organization) {
 		this.organization = organization;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPatentPath() {
+		return this.patentPath;
+	}
+
+	public void setPatentPath(String patentPath) {
+		this.patentPath = patentPath;
 	}
 
 	public Set getReProjectPatentUsers() {

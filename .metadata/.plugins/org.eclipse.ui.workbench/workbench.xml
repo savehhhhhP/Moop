@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="58" version="2.0">
+<workbench progressCount="51" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="100" y="0">
+<window height="768" maximized="true" width="1024" x="301" y="57">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="166" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="204" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.genuitec.eclipse.j2eedt.core.ejb" itemType="typeToolBarContribution" x="55" y="22"/>
 <coolItem id="com.genuitec.eclipse.uml.actions" itemType="typeToolBarContribution" x="61" y="22"/>
@@ -21,18 +21,22 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="175" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="78" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.sqlexplorer.editors.SQLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor" itemType="typePlaceholder" x="38" y="22"/>
+<coolItem id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" itemType="typePlaceholder" x="38" y="22"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typePlaceholder" x="342" y="22"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -48,55 +52,50 @@
 </folder>
 </info>
 </editorArea>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="manageProject.jsp" partName="manageProject.jsp" path="E:/github moop/Moop/MoopSystem/WebRoot/manageProject.jsp" title="manageProject.jsp" tooltip="MoopSystem/WebRoot/manageProject.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MoopSystem/WebRoot/manageProject.jsp"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetManageProjectInfoAction.java" partName="GetManageProjectInfoAction.java" path="E:/github moop/Moop/MoopSystem/src/action/GetManageProjectInfoAction.java" title="GetManageProjectInfoAction.java" tooltip="MoopSystem/src/action/GetManageProjectInfoAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MoopSystem/src/action/GetManageProjectInfoAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1745" selectionTopPixel="623"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="manageproject.js" partName="manageproject.js" path="E:/github moop/Moop/MoopSystem/WebRoot/js/manageproject.js" title="manageproject.js" tooltip="MoopSystem/WebRoot/js/manageproject.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MoopSystem/WebRoot/js/manageproject.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2648" selectionTopPixel="1140"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UploadFileAction.java" partName="UploadFileAction.java" path="E:/github moop/Moop/MoopSystem/src/action/UploadFileAction.java" title="UploadFileAction.java" tooltip="MoopSystem/src/action/UploadFileAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MoopSystem/src/action/UploadFileAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6042" selectionTopPixel="3060"/>
 </editor>
 </editors>
 <views>
-<view id="com.genuitec.eclipse.sqlexplorer.views.SQLResultsView" partName="SQL Results">
+<view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser">
 <viewState/>
 </view>
-<view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser"/>
+<view id="org.eclipse.jpt.ui.jpaStructureView" partName="JPA Structure">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy"/>
-<view id="uky.article.imageviewer.views.ImageView" partName="Image Preview">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
-<viewState/>
-</view>
-<view id="com.genuitec.eclipse.sqlexplorer.views.TableInfoView" partName="Table/Object Info"/>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
-<viewState/>
-</view>
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables">
 <viewState/>
 </view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
-<view id="com.genuitec.eclipse.sqlexplorer.views.ConnectionInfo" partName="DB Connection Info"/>
+<view id="com.genuitec.eclipse.sqlexplorer.views.ConnectionInfo" partName="DB Connection Info">
+<viewState/>
+</view>
 <view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
 <viewState/>
 </view>
-<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
-<view id="com.genuitec.javascript.debug.ui.scriptView" partName="JavaScript Scripts Inspector"/>
-<view id="com.genuitec.eclipse.ast.deploy.core.serverview" partName="Servers">
+<view id="com.genuitec.org.hibernate.eclipse.console.views.QueryPageTabView" partName="Hibernate Query Result">
 <viewState/>
 </view>
+<view id="com.genuitec.javascript.debug.ui.scriptView" partName="JavaScript Scripts Inspector"/>
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
 <viewState/>
 </view>
-<view id="com.genuitec.eclipse.sqlexplorer.views.SQLHistoryView" partName="SQL History"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (100 of 496 items)"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (100 of 987 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -105,6 +104,12 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
+</view>
+<view id="org.eclipse.jpt.ui.jpaDetailsView" partName="JPA Details">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
@@ -136,14 +141,35 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
 <view id="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" partName="DB Browser">
 <viewState/>
 </view>
+<view id="com.genuitec.eclipse.sqlexplorer.views.SQLResultsView" partName="SQL Results">
+<viewState/>
+</view>
+<view id="uky.article.imageviewer.views.ImageView" partName="Image Preview">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="com.genuitec.eclipse.sqlexplorer.views.TableInfoView" partName="Table/Object Info">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
+<view id="com.genuitec.eclipse.ast.deploy.core.serverview" partName="Servers">
+<viewState/>
+</view>
+<view id="com.genuitec.eclipse.sqlexplorer.views.SQLHistoryView" partName="SQL History"/>
+<view id="com.genuitec.org.hibernate.eclipse.console.views.DynamicQueryTranslatorView" partName="Hibernate Dynamic Query Translator">
+<viewState/>
+</view>
+<view id="com.genuitec.org.hibernate.eclipse.console.views.QueryParametersView" partName="Query Parameters">
+<viewState/>
+</view>
 </views>
-<perspectives activePart="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -188,6 +214,7 @@
 <alwaysOnActionSet id="com.genuitec.eclipse.uml2.ui.actions"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
 <alwaysOnActionSet id="com.genuitec.eclipse.web20.actionset"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="com.genuitec.eclipse.ast.deploy.core.serverview"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
@@ -241,8 +268,6 @@
 <view id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <view id="uky.article.imageviewer.views.ImageView"/>
 <view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="com.genuitec.eclipse.ui.HTMLView"/>
@@ -263,24 +288,21 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.21809745" ratioLeft="282" ratioRight="1011" relationship="2" relative="cvslocation"/>
+<info part="org.eclipse.ui.editorss" ratio="0.20262954" ratioLeft="262" ratioRight="1031" relationship="2" relative="cvslocation"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@10edaf3" ratio="0.75" ratioLeft="600" ratioRight="200" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@48bd67" ratio="0.54868627" ratioLeft="355" ratioRight="292" relationship="4" relative="org.eclipse.ui.internal.ViewStack@10edaf3">
-<folder activePageID="org.eclipse.ui.views.PropertySheet" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.DebugView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="bottom" ratio="0.8260188" ratioLeft="527" ratioRight="111" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.7178683" ratioLeft="458" ratioRight="180" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -386,21 +408,30 @@
 <view id="com.genuitec.eclipse.sqlexplorer.views.TableInfoView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="cvslocation">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+<layout>
+<mainWindow>
+<info folder="true" part="cvslocation">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="cvslocation">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="cvslocation">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="324" ratioRight="972" relationship="2" relative="cvslocation"/>
-<info folder="true" part="bottom" ratio="0.49921995" ratioLeft="320" ratioRight="321" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="com.genuitec.eclipse.sqlexplorer.views.SQLResultsView" label="SQL Results"/>
+<info folder="true" part="bottom" ratio="0.6394984" ratioLeft="408" ratioRight="230" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.genuitec.eclipse.sqlexplorer.views.TableInfoView" appearance="2" expanded="2">
+<page content="com.genuitec.eclipse.sqlexplorer.views.SQLResultsView" label="SQL Results"/>
 <page content="com.genuitec.eclipse.sqlexplorer.views.SQLHistoryView" label="SQL History"/>
 <page content="com.genuitec.eclipse.sqlexplorer.views.ConnectionInfo" label="DB Connection Info"/>
 <page content="com.genuitec.eclipse.sqlexplorer.views.TableInfoView" label="Table/Object Info"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
@@ -408,8 +439,11 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="topLeft" ratio="0.39937598" ratioLeft="256" ratioRight="385" relationship="4" relative="cvslocation">&#x0A;<folder activePageID="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" appearance="2" expanded="2">&#x0A;<page content="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" label="DB Browser"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<info folder="true" part="topLeft" ratio="0.39937598" ratioLeft="256" ratioRight="385" relationship="4" relative="cvslocation">
+<folder activePageID="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" appearance="2" expanded="2">
+<page content="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" label="DB Browser"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -503,24 +537,33 @@
 <view id="org.eclipse.debug.ui.ExpressionView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="com.genuitec.eclipse.ast.deploy.core.serverview" label="Servers"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.dltk.ui.ScriptExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.wst.server.ui.ServersView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.70062697" ratioLeft="447" ratioRight="191" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.70062697" ratioLeft="447" ratioRight="191" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="com.genuitec.javascript.debug.ui.scriptView" label="JavaScript Scripts Inspector"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
@@ -531,29 +574,312 @@
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
 <page content="org.eclipse.wst.xsl.jaxp.debug.ui.view1" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.5505618" ratioLeft="196" ratioRight="160" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <page content="org.eclipse.atf.mozilla.ide.ui.views.inspector" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="648" ratioRight="648" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="648" ratioRight="648" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.eclipse.atf.mozilla.ide.debug.ui.scriptview" label="LabelNotFound"/>
 <page content="org.eclipse.dltk.debug.ui.ScriptDisplayView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.genuitec.eclipse.hibernate.core.HibernatePerspective" id="com.genuitec.eclipse.hibernate.perspective.HibernatePerspective" label="MyEclipse Hibernate"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.test.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.desktop"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.screencapture"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.examples.actionSet"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.hibernatetools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.webtools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.j2eedt.core.ejb"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jsftools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.faceletstools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.maven.pro.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jpatools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.portlet.portletactions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.reporting"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.springtools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.strutstools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.restsupport"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.ws.xfire.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.icefaces"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.about.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.product.actions"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.ActionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.matcher.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.search.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.web20.actionset"/>
+<show_view_action id="com.genuitec.org.hibernate.eclipse.console.views.QueryPageTabView"/>
+<show_view_action id="com.genuitec.org.hibernate.eclipse.console.views.QueryParametersView"/>
+<show_view_action id="com.genuitec.org.hibernate.eclipse.console.views.DynamicQueryTranslatorView"/>
+<show_view_action id="com.genuitec.eclipse.sqlexplorer.views.DatabaseView"/>
+<show_view_action id="com.genuitec.eclipse.sqlexplorer.views.TableInfoView"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.EJBProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.NewEARProjectWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.WebProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.ws.xfire.wizards.NewXFireWebProjectWizard1"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.hibernate.newconfigwizard"/>
+<new_wizard_action id="com.genuitec.eclipse.hibernate.newsessionfactorywizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.reporting.projectwizard"/>
+<perspective_action id="com.genuitec.eclipse.dehory.dehoryperspective"/>
+<perspective_action id="com.genuitec.eclipse.imageeditor.perspective"/>
+<perspective_action id="com.genuitec.dali.adapter.persistencePerspective"/>
+<perspective_action id="com.genuitec.eclipse.reporting.ReportPerspective"/>
+<perspective_action id="com.genuitec.eclipse.sqlexplorer.perspectives.SQLExplorerPluginPerspective"/>
+<perspective_action id="com.genuitec.eclipse.uml.umlPerspective"/>
+<perspective_action id="com.genuitec.myeclipse.perspective.myeclipseperspective"/>
+<perspective_action id="com.genuitec.eclipse.web20.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.genuitec.eclipse.sqlexplorer.views.DatabaseView"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="com.genuitec.org.hibernate.eclipse.console.views.QueryPageTabView"/>
+<view id="com.genuitec.eclipse.sqlexplorer.views.TableInfoView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="com.genuitec.org.hibernate.eclipse.console.views.DynamicQueryTranslatorView"/>
+<view id="com.genuitec.org.hibernate.eclipse.console.views.QueryParametersView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="cvslocation">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="cvslocation">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.19984567" ratioLeft="259" ratioRight="1037" relationship="2" relative="cvslocation"/>
+<info folder="true" part="bottomLeft" ratio="0.7492447" ratioLeft="496" ratioRight="166" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.genuitec.org.hibernate.eclipse.console.views.QueryPageTabView" appearance="2" expanded="2">&#x0A;<page content="com.genuitec.org.hibernate.eclipse.console.views.QueryPageTabView" label="Hibernate Query Result"/>
+<page content="com.genuitec.eclipse.sqlexplorer.views.TableInfoView" label="Table/Object Info"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottomRight" ratio="0.49951783" ratioLeft="518" ratioRight="519" relationship="2" relative="bottomLeft">&#x0A;<folder activePageID="com.genuitec.org.hibernate.eclipse.console.views.DynamicQueryTranslatorView" appearance="2" expanded="2">&#x0A;<page content="com.genuitec.org.hibernate.eclipse.console.views.DynamicQueryTranslatorView" label="Hibernate Dynamic Query Translator"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="queryParams" ratio="0.686596" ratioLeft="712" ratioRight="325" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.genuitec.org.hibernate.eclipse.console.views.QueryParametersView" appearance="2" expanded="2">&#x0A;<page content="com.genuitec.org.hibernate.eclipse.console.views.QueryParametersView" label="Query Parameters"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="dbTree" ratio="0.39879155" ratioLeft="264" ratioRight="398" relationship="4" relative="cvslocation">&#x0A;<folder activePageID="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" appearance="2" expanded="2">&#x0A;<page content="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" label="DB Browser"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="packageExplorer" ratio="0.5" ratioLeft="331" ratioRight="331" relationship="4" relative="dbTree">&#x0A;<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.genuitec.eclipse.persistence.jpa.perspective.PersistencePerspective" id="com.genuitec.dali.adapter.persistencePerspective" label="MyEclipse Java Persistence"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.test.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.desktop"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.screencapture"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.examples.actionSet"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.hibernatetools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.webtools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.j2eedt.core.ejb"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jsftools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.faceletstools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.maven.pro.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jpatools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.portlet.portletactions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.reporting"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.springtools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.strutstools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.restsupport"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.ws.xfire.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.icefaces"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.about.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.product.actions"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.ActionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.matcher.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.search.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<show_view_action id="org.eclipse.jpt.ui.jpaStructureView"/>
+<show_view_action id="org.eclipse.jpt.ui.jpaDetailsView"/>
+<show_view_action id="com.genuitec.eclipse.sqlexplorer.views.DatabaseView"/>
+<show_view_action id="com.genuitec.eclipse.sqlexplorer.views.TableInfoView"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.EJBProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.NewEARProjectWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.WebProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.ws.xfire.wizards.NewXFireWebProjectWizard1"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.hibernate.newconfigwizard"/>
+<new_wizard_action id="com.genuitec.eclipse.hibernate.newsessionfactorywizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.reporting.projectwizard"/>
+<perspective_action id="com.genuitec.eclipse.dehory.dehoryperspective"/>
+<perspective_action id="com.genuitec.eclipse.hibernate.perspective.HibernatePerspective"/>
+<perspective_action id="com.genuitec.eclipse.imageeditor.perspective"/>
+<perspective_action id="com.genuitec.eclipse.reporting.ReportPerspective"/>
+<perspective_action id="com.genuitec.eclipse.sqlexplorer.perspectives.SQLExplorerPluginPerspective"/>
+<perspective_action id="com.genuitec.eclipse.uml.umlPerspective"/>
+<perspective_action id="com.genuitec.myeclipse.perspective.myeclipseperspective"/>
+<perspective_action id="com.genuitec.eclipse.web20.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.genuitec.eclipse.sqlexplorer.views.DatabaseView"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="com.genuitec.eclipse.sqlexplorer.views.TableInfoView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jpt.ui.jpaDetailsView"/>
+<view id="org.eclipse.jpt.ui.jpaStructureView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="cvslocation">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="972" ratioRight="324" relationship="2" relative="cvslocation">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.19984567" ratioLeft="259" ratioRight="1037" relationship="2" relative="cvslocation"/>
+<info folder="true" part="bottomLeft" ratio="0.74882996" ratioLeft="480" ratioRight="161" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.genuitec.eclipse.sqlexplorer.views.TableInfoView" appearance="2" expanded="2">&#x0A;<page content="com.genuitec.eclipse.sqlexplorer.views.TableInfoView" label="Table/Object Info"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottomRight" ratio="0.49951783" ratioLeft="518" ratioRight="519" relationship="2" relative="bottomLeft">&#x0A;<folder activePageID="org.eclipse.jpt.ui.jpaDetailsView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jpt.ui.jpaDetailsView" label="JPA Details"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="queryParams" ratio="0.8119576" ratioLeft="842" ratioRight="195" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.jpt.ui.jpaStructureView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jpt.ui.jpaStructureView" label="JPA Structure"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="dbTree" ratio="0.39937598" ratioLeft="256" ratioRight="385" relationship="4" relative="cvslocation">&#x0A;<folder activePageID="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" appearance="2" expanded="2">&#x0A;<page content="com.genuitec.eclipse.sqlexplorer.views.DatabaseView" label="DB Browser"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="packageExplorer" ratio="0.49921995" ratioLeft="320" ratioRight="321" relationship="4" relative="dbTree">&#x0A;<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -564,140 +890,156 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/MoopSystem/WebRoot/js/manageproject.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/action/GetManageProjectInfoAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/service/ReProjectUserService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/service/ReProjectUserServiceImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/dao/ReProjectUserDAOImpl.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/MoopSystem/WebRoot/manageProject.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/MoopSystem/WebRoot/js/createnewproject.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/MoopSystem/WebRoot/createNewProject.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/action/CreateNewProjectAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/MoopSystem/WebRoot/register.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/action/RegisterAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/service/UserServiceImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/dao/UserDAOImpl.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/MoopSystem/WebRoot/manageProject.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/MoopSystem/WebRoot/js/manageproject.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" path="/MoopSystem/WebRoot/css/manageproject.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/action/UpdateProjectAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MoopSystem/src/action/UploadFileAction.java"/>
 </editors>
-<item historyLabel="UserServiceImpl.java" index="7">
-<position info="not_deleted" x="710" y="0"/>
+<item historyLabel="ReProjectUserService.java" index="1">
+<position/>
 </item>
-<item historyLabel="UserDAOImpl.java" index="8">
-<position info="not_deleted" x="1460" y="0"/>
+<item historyLabel="ReProjectUserServiceImpl.java" index="2">
+<position info="not_deleted" x="490" y="23"/>
 </item>
-<item historyLabel="UserServiceImpl.java" index="7">
-<position info="not_deleted" x="710" y="0"/>
+<item historyLabel="ReProjectUserServiceImpl.java" index="2">
+<position info="not_deleted" x="182" y="0"/>
 </item>
-<item historyLabel="createNewProject.jsp" index="3"/>
-<item historyLabel="register.jsp" index="5"/>
-<item historyLabel="createNewProject.jsp" index="3"/>
-<item historyLabel="UserServiceImpl.java" index="7">
-<position info="not_deleted" x="710" y="0"/>
+<item historyLabel="ReProjectUserServiceImpl.java" index="2">
+<position info="not_deleted" x="191" y="16"/>
 </item>
-<item historyLabel="RegisterAction.java" index="6">
-<position info="not_deleted" x="2071" y="0"/>
+<item historyLabel="ReProjectUserServiceImpl.java" index="2">
+<position info="not_deleted" x="630" y="0"/>
 </item>
-<item historyLabel="createnewproject.js" index="2">
-<position info="not_deleted" x="520" y="0"/>
+<item historyLabel="ReProjectUserService.java" index="1">
+<position/>
 </item>
-<item historyLabel="CreateNewProjectAction.java" index="4">
-<position info="not_deleted" x="6313" y="0"/>
+<item historyLabel="ReProjectUserDAOImpl.java" index="3">
+<position info="not_deleted" x="343" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2663" y="0"/>
+<item historyLabel="ReProjectUserDAOImpl.java" index="3">
+<position/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2663" y="0"/>
+<item historyLabel="ReProjectUserDAOImpl.java" index="3">
+<position info="not_deleted" x="507" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2347" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2660" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="542" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1">
-<position info="not_deleted" x="10401" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="513" y="13"/>
 </item>
-<item historyLabel="manageProject.jsp" index="9">
-<position info="not_deleted" x="10462" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1557" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="9">
-<position info="not_deleted" x="10516" y="0"/>
+<item historyLabel="ReProjectUserService.java" index="1">
+<position info="not_deleted" x="130" y="13"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2660" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1603" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2399" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="527" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2428" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1895" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2456" y="0"/>
+<item historyLabel="ReProjectUserService.java" index="1">
+<position info="not_deleted" x="130" y="13"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2456" y="0"/>
+<item historyLabel="manageProject.jsp" index="4"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="528" y="13"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2657" y="0"/>
+<item historyLabel="manageProject.jsp" index="4"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="528" y="13"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2657" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="642" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2477" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1659" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2477" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1468" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2652" y="0"/>
+<item historyLabel="manageProject.jsp" index="4"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1743" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1">
-<position info="not_deleted" x="10047" y="0"/>
+<item historyLabel="manageProject.jsp" index="4">
+<position info="not_deleted" x="8499" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2652" y="0"/>
+<item historyLabel="manageProject.jsp" index="5">
+<position info="not_deleted" x="10690" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1">
-<position info="not_deleted" x="10047" y="0"/>
+<item historyLabel="manageProject.jsp" index="5">
+<position info="not_deleted" x="8548" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2652" y="0"/>
+<item historyLabel="manageProject.jsp" index="5">
+<position info="not_deleted" x="9493" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2652" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1743" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2650" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1659" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2652" y="0"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1745" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2652" y="0"/>
+<item historyLabel="manageProject.jsp" index="4">
+<position info="not_deleted" x="8745" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2507" y="0"/>
+<item historyLabel="manageProject.jsp" index="5">
+<position info="not_deleted" x="10690" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2516" y="0"/>
+<item historyLabel="manageProject.jsp" index="5">
+<position info="not_deleted" x="8660" y="0"/>
 </item>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2687" y="0"/>
+<item historyLabel="manageProject.jsp" index="5">
+<position info="not_deleted" x="8652" y="0"/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2593" y="0"/>
+<item historyLabel="manageproject.js" index="6">
+<position/>
 </item>
-<item historyLabel="manageProject.jsp" index="1"/>
-<item active="true" historyLabel="manageproject.js" index="0">
-<position info="not_deleted" x="2593" y="0"/>
+<item historyLabel="manageProject.jsp" index="4"/>
+<item historyLabel="manageproject.css" index="7">
+<position/>
+</item>
+<item historyLabel="manageproject.js" index="6">
+<position/>
+</item>
+<item historyLabel="manageproject.js" index="6">
+<position info="not_deleted" x="11821" y="0"/>
+</item>
+<item historyLabel="manageproject.css" index="7">
+<position/>
+</item>
+<item historyLabel="manageproject.js" index="6">
+<position info="not_deleted" x="11821" y="0"/>
+</item>
+<item historyLabel="manageProject.jsp" index="4"/>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1745" y="0"/>
+</item>
+<item historyLabel="UpdateProjectAction.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="GetManageProjectInfoAction.java" index="0">
+<position info="not_deleted" x="1745" y="0"/>
+</item>
+<item active="true" historyLabel="UploadFileAction.java" index="9">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -716,47 +1058,47 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="manageproject.js" tooltip="MoopSystem/WebRoot/js/manageproject.js">
-<persistable path="/MoopSystem/WebRoot/js/manageproject.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="manageProject.jsp" tooltip="MoopSystem/WebRoot/manageProject.jsp">
-<persistable path="/MoopSystem/WebRoot/manageProject.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDAOImpl.java" tooltip="MoopSystem/src/dao/UserDAOImpl.java">
-<persistable path="/MoopSystem/src/dao/UserDAOImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserServiceImpl.java" tooltip="MoopSystem/src/service/UserServiceImpl.java">
-<persistable path="/MoopSystem/src/service/UserServiceImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext.xml" tooltip="MoopSystem/src/applicationContext.xml">
-<persistable path="/MoopSystem/src/applicationContext.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserInfo.java" tooltip="MoopSystem/src/domain/UserInfo.java">
-<persistable path="/MoopSystem/src/domain/UserInfo.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RegisterAction.java" tooltip="MoopSystem/src/action/RegisterAction.java">
-<persistable path="/MoopSystem/src/action/RegisterAction.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="createnewproject.js" tooltip="MoopSystem/WebRoot/js/createnewproject.js">
-<persistable path="/MoopSystem/WebRoot/js/createnewproject.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="createNewProject.jsp" tooltip="MoopSystem/WebRoot/createNewProject.jsp">
-<persistable path="/MoopSystem/WebRoot/createNewProject.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="register.jsp" tooltip="MoopSystem/WebRoot/register.jsp">
-<persistable path="/MoopSystem/WebRoot/register.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CreateNewProjectAction.java" tooltip="MoopSystem/src/action/CreateNewProjectAction.java">
-<persistable path="/MoopSystem/src/action/CreateNewProjectAction.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="jquery.form.js" tooltip="MoopSystem/WebRoot/js/jquery/jquery.form.js">
-<persistable path="/MoopSystem/WebRoot/js/jquery/jquery.form.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UploadFileAction.java" tooltip="MoopSystem/src/action/UploadFileAction.java">
+<persistable path="/MoopSystem/src/action/UploadFileAction.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UpdateProjectAction.java" tooltip="MoopSystem/src/action/UpdateProjectAction.java">
 <persistable path="/MoopSystem/src/action/UpdateProjectAction.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" name="struts.xml" tooltip="MoopSystem/src/struts.xml">
-<persistable path="/MoopSystem/src/struts.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="manageproject.css" tooltip="MoopSystem/WebRoot/css/manageproject.css">
+<persistable path="/MoopSystem/WebRoot/css/manageproject.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="manageproject.js" tooltip="MoopSystem/WebRoot/js/manageproject.js">
+<persistable path="/MoopSystem/WebRoot/js/manageproject.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetManageProjectInfoAction.java" tooltip="MoopSystem/src/action/GetManageProjectInfoAction.java">
+<persistable path="/MoopSystem/src/action/GetManageProjectInfoAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="manageProject.jsp" tooltip="MoopSystem/WebRoot/manageProject.jsp">
+<persistable path="/MoopSystem/WebRoot/manageProject.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReProjectUserService.java" tooltip="MoopSystem/src/service/ReProjectUserService.java">
+<persistable path="/MoopSystem/src/service/ReProjectUserService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext.xml" tooltip="MoopSystem/src/applicationContext.xml">
+<persistable path="/MoopSystem/src/applicationContext.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReProjectUserDAOImpl.java" tooltip="MoopSystem/src/dao/ReProjectUserDAOImpl.java">
+<persistable path="/MoopSystem/src/dao/ReProjectUserDAOImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DocumentDAO.java" tooltip="MoopSystem/src/dao/DocumentDAO.java">
+<persistable path="/MoopSystem/src/dao/DocumentDAO.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReProjectUserDAO.java" tooltip="MoopSystem/src/dao/ReProjectUserDAO.java">
+<persistable path="/MoopSystem/src/dao/ReProjectUserDAO.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReProjectUserServiceImpl.java" tooltip="MoopSystem/src/service/ReProjectUserServiceImpl.java">
+<persistable path="/MoopSystem/src/service/ReProjectUserServiceImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PatentService.java" tooltip="MoopSystem/src/service/PatentService.java">
+<persistable path="/MoopSystem/src/service/PatentService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ReProjectUser.java" tooltip="MoopSystem/src/domain/ReProjectUser.java">
+<persistable path="/MoopSystem/src/domain/ReProjectUser.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="myproject.js" tooltip="MoopSystem/WebRoot/js/myproject.js">
 <persistable path="/MoopSystem/WebRoot/js/myproject.js"/>

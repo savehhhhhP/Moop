@@ -12,10 +12,10 @@ public class ReProjectDocumentUser implements java.io.Serializable {
 	private SubprojectInfo subprojectInfo;
 	private Document document;
 	private UserInfo userInfo;
-	private ProjectInfo projectInfo;
-	private Enterprise enterprise;
+	private Integer projectId;
 	private String documentName;
 	private String authorName;
+	private Integer enterpriseId;
 	private String enterpriseName;
 	private String authorOrder;
 
@@ -27,16 +27,16 @@ public class ReProjectDocumentUser implements java.io.Serializable {
 
 	/** full constructor */
 	public ReProjectDocumentUser(SubprojectInfo subprojectInfo,
-			Document document, UserInfo userInfo, ProjectInfo projectInfo,
-			Enterprise enterprise, String documentName, String authorName,
+			Document document, UserInfo userInfo, Integer projectId,
+			String documentName, String authorName, Integer enterpriseId,
 			String enterpriseName, String authorOrder) {
 		this.subprojectInfo = subprojectInfo;
 		this.document = document;
 		this.userInfo = userInfo;
-		this.projectInfo = projectInfo;
-		this.enterprise = enterprise;
+		this.projectId = projectId;
 		this.documentName = documentName;
 		this.authorName = authorName;
+		this.enterpriseId = enterpriseId;
 		this.enterpriseName = enterpriseName;
 		this.authorOrder = authorOrder;
 	}
@@ -75,20 +75,12 @@ public class ReProjectDocumentUser implements java.io.Serializable {
 		this.userInfo = userInfo;
 	}
 
-	public ProjectInfo getProjectInfo() {
-		return this.projectInfo;
+	public Integer getProjectId() {
+		return this.projectId;
 	}
 
-	public void setProjectInfo(ProjectInfo projectInfo) {
-		this.projectInfo = projectInfo;
-	}
-
-	public Enterprise getEnterprise() {
-		return this.enterprise;
-	}
-
-	public void setEnterprise(Enterprise enterprise) {
-		this.enterprise = enterprise;
+	public void setProjectId(Integer projectId) {
+		this.projectId = projectId;
 	}
 
 	public String getDocumentName() {
@@ -105,6 +97,14 @@ public class ReProjectDocumentUser implements java.io.Serializable {
 
 	public void setAuthorName(String authorName) {
 		this.authorName = authorName;
+	}
+
+	public Integer getEnterpriseId() {
+		return this.enterpriseId;
+	}
+
+	public void setEnterpriseId(Integer enterpriseId) {
+		this.enterpriseId = enterpriseId;
 	}
 
 	public String getEnterpriseName() {

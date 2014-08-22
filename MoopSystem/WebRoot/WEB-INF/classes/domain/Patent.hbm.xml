@@ -10,13 +10,16 @@
             <column name="ID" />
             <generator class="native" />
         </id>
+        <many-to-one name="projectInfo" class="domain.ProjectInfo" fetch="select">
+            <column name="ProjectID" not-null="true" />
+        </many-to-one>
         <many-to-one name="userInfo" class="domain.UserInfo" fetch="select">
             <column name="UserID" not-null="true" />
         </many-to-one>
         <property name="patentNum" type="string">
             <column name="PatentNum" not-null="true" />
         </property>
-        <property name="applyDate" type="date">
+        <property name="applyDate" type="string">
             <column name="ApplyDate" length="10" not-null="true" />
         </property>
         <property name="author" type="string">
@@ -25,11 +28,17 @@
         <property name="keyWords" type="string">
             <column name="KeyWords" not-null="true" />
         </property>
-        <property name="abstract_" type="string">
-            <column name="Abstract" not-null="true" />
+        <property name="abstractContent" type="string">
+            <column name="AbstractContent" not-null="true" />
         </property>
         <property name="organization" type="string">
             <column name="Organization" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="Name" not-null="true" />
+        </property>
+        <property name="patentPath" type="string">
+            <column name="PatentPath" not-null="true" />
         </property>
         <set name="reProjectPatentUsers" inverse="true">
             <key>

@@ -13,9 +13,9 @@ public class ReProjectThesisUser implements java.io.Serializable {
 	private SubprojectInfo subprojectInfo;
 	private UserInfo userInfo;
 	private ProjectInfo projectInfo;
-	private Enterprise enterprise;
 	private String thesisTopic;
 	private String authorName;
+	private Integer enterpriseId;
 	private String enterpriseName;
 	private String authorOrder;
 
@@ -27,16 +27,16 @@ public class ReProjectThesisUser implements java.io.Serializable {
 
 	/** full constructor */
 	public ReProjectThesisUser(Thesis thesis, SubprojectInfo subprojectInfo,
-			UserInfo userInfo, ProjectInfo projectInfo, Enterprise enterprise,
-			String thesisTopic, String authorName, String enterpriseName,
+			UserInfo userInfo, ProjectInfo projectInfo, String thesisTopic,
+			String authorName, Integer enterpriseId, String enterpriseName,
 			String authorOrder) {
 		this.thesis = thesis;
 		this.subprojectInfo = subprojectInfo;
 		this.userInfo = userInfo;
 		this.projectInfo = projectInfo;
-		this.enterprise = enterprise;
 		this.thesisTopic = thesisTopic;
 		this.authorName = authorName;
+		this.enterpriseId = enterpriseId;
 		this.enterpriseName = enterpriseName;
 		this.authorOrder = authorOrder;
 	}
@@ -83,14 +83,6 @@ public class ReProjectThesisUser implements java.io.Serializable {
 		this.projectInfo = projectInfo;
 	}
 
-	public Enterprise getEnterprise() {
-		return this.enterprise;
-	}
-
-	public void setEnterprise(Enterprise enterprise) {
-		this.enterprise = enterprise;
-	}
-
 	public String getThesisTopic() {
 		return this.thesisTopic;
 	}
@@ -105,6 +97,14 @@ public class ReProjectThesisUser implements java.io.Serializable {
 
 	public void setAuthorName(String authorName) {
 		this.authorName = authorName;
+	}
+
+	public Integer getEnterpriseId() {
+		return this.enterpriseId;
+	}
+
+	public void setEnterpriseId(Integer enterpriseId) {
+		this.enterpriseId = enterpriseId;
 	}
 
 	public String getEnterpriseName() {

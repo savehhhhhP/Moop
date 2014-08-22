@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
-<fullyQualifiedTypeName name="service.ProjectService"/>
 <fullyQualifiedTypeName name="domain.ProjectInfo"/>
 <fullyQualifiedTypeName name="service.ProjectTypeService"/>
 <fullyQualifiedTypeName name="service.ProjectStateService"/>
 <fullyQualifiedTypeName name="domain.ProjectType"/>
 <fullyQualifiedTypeName name="domain.ProjectState"/>
 <fullyQualifiedTypeName name="service.EnterpriseService"/>
-<fullyQualifiedTypeName name="service.UserService"/>
 <fullyQualifiedTypeName name="domain.Enterprise"/>
+<fullyQualifiedTypeName name="dao.PatentDAO"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="domain.UserInfo"/>
+<fullyQualifiedTypeName name="service.ProjectService"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="function.UploadOtherFileImpl"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="domain.Patent"/>
+<fullyQualifiedTypeName name="dao.ThesisDAO"/>
+<fullyQualifiedTypeName name="service.ThesisService"/>
+<fullyQualifiedTypeName name="domain.Thesis"/>
+<fullyQualifiedTypeName name="dao.DocumentDAO"/>
+<fullyQualifiedTypeName name="service.PatentService"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="service.UserService"/>
+<fullyQualifiedTypeName name="service.DocumentService"/>
+<fullyQualifiedTypeName name="domain.Document"/>
+<fullyQualifiedTypeName name="org.springframework.orm.hibernate3.support.HibernateDaoSupport"/>
+<fullyQualifiedTypeName name="service.ReProjectUserService"/>
+<fullyQualifiedTypeName name="dao.ReProjectUserDAO"/>
+<fullyQualifiedTypeName name="domain.ReProjectUser"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

@@ -12,8 +12,8 @@ public class ReProjectSoftwareUser implements java.io.Serializable {
 	private SubprojectInfo subprojectInfo;
 	private SoftwareRight softwareRight;
 	private UserInfo userInfo;
-	private ProjectInfo projectInfo;
 	private Enterprise enterprise;
+	private Integer projectId;
 	private String softwareName;
 	private String authorName;
 	private String enterpriseName;
@@ -28,14 +28,13 @@ public class ReProjectSoftwareUser implements java.io.Serializable {
 	/** full constructor */
 	public ReProjectSoftwareUser(SubprojectInfo subprojectInfo,
 			SoftwareRight softwareRight, UserInfo userInfo,
-			ProjectInfo projectInfo, Enterprise enterprise,
-			String softwareName, String authorName, String enterpriseName,
-			String authorOrder) {
+			Enterprise enterprise, Integer projectId, String softwareName,
+			String authorName, String enterpriseName, String authorOrder) {
 		this.subprojectInfo = subprojectInfo;
 		this.softwareRight = softwareRight;
 		this.userInfo = userInfo;
-		this.projectInfo = projectInfo;
 		this.enterprise = enterprise;
+		this.projectId = projectId;
 		this.softwareName = softwareName;
 		this.authorName = authorName;
 		this.enterpriseName = enterpriseName;
@@ -76,20 +75,20 @@ public class ReProjectSoftwareUser implements java.io.Serializable {
 		this.userInfo = userInfo;
 	}
 
-	public ProjectInfo getProjectInfo() {
-		return this.projectInfo;
-	}
-
-	public void setProjectInfo(ProjectInfo projectInfo) {
-		this.projectInfo = projectInfo;
-	}
-
 	public Enterprise getEnterprise() {
 		return this.enterprise;
 	}
 
 	public void setEnterprise(Enterprise enterprise) {
 		this.enterprise = enterprise;
+	}
+
+	public Integer getProjectId() {
+		return this.projectId;
+	}
+
+	public void setProjectId(Integer projectId) {
+		this.projectId = projectId;
 	}
 
 	public String getSoftwareName() {

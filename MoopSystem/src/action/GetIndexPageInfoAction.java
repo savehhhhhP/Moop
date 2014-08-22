@@ -71,30 +71,6 @@ public class GetIndexPageInfoAction extends ActionSupport {
 	}
 
 	public String execute() {
-		
-		 //projectService.selectLatestProject();
-		/*List<ProjectInfo> projectInfo = projectService.selectLatestProject();
-		System.out.println("execute()");
-		if (projectInfo.size() != 0) {
-			HttpServletResponse response = ServletActionContext.getResponse();
-			response.setCharacterEncoding("UTF-8");
-			try {
-				PrintWriter writer = response.getWriter();
-				//System.out.println(projectInfo);
-				JSONArray jsonList = JSONArray.fromObject(projectInfo);
-				System.out.println(jsonList);
-				System.out.println(jsonList.toString());
-				writer.write(jsonList.toString());
-				return null;
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			writer.write(null);
-			return null;
-		}
-		return null;*/
-		
 		List<ProjectInfo> projectInfo = projectService.selectLatestProject();
 		HttpServletResponse response = ServletActionContext.getResponse();
 		response.setCharacterEncoding("UTF-8");

@@ -50,11 +50,12 @@ public class UserInfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public UserInfo(String name, String email, String password, Enterprise enterprise) {
+	public UserInfo(Enterprise enterprise, String name, String email,
+			String password) {
+		this.enterprise = enterprise;
 		this.name = name;
 		this.email = email;
 		this.password = password;
-		this.enterprise = enterprise;
 	}
 
 	/** full constructor */

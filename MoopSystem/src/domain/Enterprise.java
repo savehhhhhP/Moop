@@ -19,11 +19,8 @@ public class Enterprise implements java.io.Serializable {
 	private Set reProjectUsers = new HashSet(0);
 	private Set reSubprojectEnterprises = new HashSet(0);
 	private Set userInfos = new HashSet(0);
-	private Set reProjectThesisUsers = new HashSet(0);
 	private Set reEnterpriseUsers = new HashSet(0);
-	private Set subprojectInfos = new HashSet(0);
 	private Set projectInfos = new HashSet(0);
-	private Set reProjectDocumentUsers = new HashSet(0);
 
 	// Constructors
 
@@ -40,8 +37,7 @@ public class Enterprise implements java.io.Serializable {
 	public Enterprise(String enterpriseName, Set reProjectSoftwareUsers,
 			Set reProjectEnterprises, Set reProjectPatentUsers,
 			Set reProjectUsers, Set reSubprojectEnterprises, Set userInfos,
-			Set reProjectThesisUsers, Set reEnterpriseUsers,
-			Set subprojectInfos, Set projectInfos, Set reProjectDocumentUsers) {
+			Set reEnterpriseUsers, Set projectInfos) {
 		this.enterpriseName = enterpriseName;
 		this.reProjectSoftwareUsers = reProjectSoftwareUsers;
 		this.reProjectEnterprises = reProjectEnterprises;
@@ -49,11 +45,8 @@ public class Enterprise implements java.io.Serializable {
 		this.reProjectUsers = reProjectUsers;
 		this.reSubprojectEnterprises = reSubprojectEnterprises;
 		this.userInfos = userInfos;
-		this.reProjectThesisUsers = reProjectThesisUsers;
 		this.reEnterpriseUsers = reEnterpriseUsers;
-		this.subprojectInfos = subprojectInfos;
 		this.projectInfos = projectInfos;
-		this.reProjectDocumentUsers = reProjectDocumentUsers;
 	}
 
 	// Property accessors
@@ -122,14 +115,6 @@ public class Enterprise implements java.io.Serializable {
 		this.userInfos = userInfos;
 	}
 
-	public Set getReProjectThesisUsers() {
-		return this.reProjectThesisUsers;
-	}
-
-	public void setReProjectThesisUsers(Set reProjectThesisUsers) {
-		this.reProjectThesisUsers = reProjectThesisUsers;
-	}
-
 	public Set getReEnterpriseUsers() {
 		return this.reEnterpriseUsers;
 	}
@@ -138,28 +123,12 @@ public class Enterprise implements java.io.Serializable {
 		this.reEnterpriseUsers = reEnterpriseUsers;
 	}
 
-	public Set getSubprojectInfos() {
-		return this.subprojectInfos;
-	}
-
-	public void setSubprojectInfos(Set subprojectInfos) {
-		this.subprojectInfos = subprojectInfos;
-	}
-
 	public Set getProjectInfos() {
 		return this.projectInfos;
 	}
 
 	public void setProjectInfos(Set projectInfos) {
 		this.projectInfos = projectInfos;
-	}
-
-	public Set getReProjectDocumentUsers() {
-		return this.reProjectDocumentUsers;
-	}
-
-	public void setReProjectDocumentUsers(Set reProjectDocumentUsers) {
-		this.reProjectDocumentUsers = reProjectDocumentUsers;
 	}
 
 }

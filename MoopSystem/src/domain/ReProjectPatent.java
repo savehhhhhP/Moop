@@ -24,6 +24,16 @@ public class ReProjectPatent implements java.io.Serializable {
 	public ReProjectPatent() {
 	}
 
+	/** minimal constructor */
+	public ReProjectPatent(ProjectInfo projectInfo, String patentNumber,
+			Date applyDate, String author, String organization) {
+		this.projectInfo = projectInfo;
+		this.patentNumber = patentNumber;
+		this.applyDate = applyDate;
+		this.author = author;
+		this.organization = organization;
+	}
+
 	/** full constructor */
 	public ReProjectPatent(SubprojectInfo subprojectInfo,
 			ProjectInfo projectInfo, String patentNumber, Date applyDate,

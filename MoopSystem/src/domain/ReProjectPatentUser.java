@@ -11,9 +11,9 @@ public class ReProjectPatentUser implements java.io.Serializable {
 	private Integer id;
 	private SubprojectInfo subprojectInfo;
 	private UserInfo userInfo;
-	private ProjectInfo projectInfo;
 	private Patent patent;
 	private Enterprise enterprise;
+	private Integer projectId;
 	private String patentNumber;
 	private String authorName;
 	private String enterpriseName;
@@ -27,14 +27,14 @@ public class ReProjectPatentUser implements java.io.Serializable {
 
 	/** full constructor */
 	public ReProjectPatentUser(SubprojectInfo subprojectInfo,
-			UserInfo userInfo, ProjectInfo projectInfo, Patent patent,
-			Enterprise enterprise, String patentNumber, String authorName,
+			UserInfo userInfo, Patent patent, Enterprise enterprise,
+			Integer projectId, String patentNumber, String authorName,
 			String enterpriseName, String authorOrder) {
 		this.subprojectInfo = subprojectInfo;
 		this.userInfo = userInfo;
-		this.projectInfo = projectInfo;
 		this.patent = patent;
 		this.enterprise = enterprise;
+		this.projectId = projectId;
 		this.patentNumber = patentNumber;
 		this.authorName = authorName;
 		this.enterpriseName = enterpriseName;
@@ -67,14 +67,6 @@ public class ReProjectPatentUser implements java.io.Serializable {
 		this.userInfo = userInfo;
 	}
 
-	public ProjectInfo getProjectInfo() {
-		return this.projectInfo;
-	}
-
-	public void setProjectInfo(ProjectInfo projectInfo) {
-		this.projectInfo = projectInfo;
-	}
-
 	public Patent getPatent() {
 		return this.patent;
 	}
@@ -89,6 +81,14 @@ public class ReProjectPatentUser implements java.io.Serializable {
 
 	public void setEnterprise(Enterprise enterprise) {
 		this.enterprise = enterprise;
+	}
+
+	public Integer getProjectId() {
+		return this.projectId;
+	}
+
+	public void setProjectId(Integer projectId) {
+		this.projectId = projectId;
 	}
 
 	public String getPatentNumber() {

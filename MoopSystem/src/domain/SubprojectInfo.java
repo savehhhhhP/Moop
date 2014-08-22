@@ -14,11 +14,11 @@ public class SubprojectInfo implements java.io.Serializable {
 
 	private Integer id;
 	private UserInfo userInfo;
-	private ProjectInfo projectInfo;
-	private Enterprise enterprise;
+	private Integer projectId;
 	private String name;
 	private String number;
 	private String masterName;
+	private Integer enterpriseId;
 	private String enterpriseName;
 	private double funds;
 	private Date startDate;
@@ -42,16 +42,16 @@ public class SubprojectInfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public SubprojectInfo(UserInfo userInfo, ProjectInfo projectInfo,
-			Enterprise enterprise, String name, String number,
-			String masterName, String enterpriseName, double funds,
-			Date startDate, Date endDate, Integer state) {
+	public SubprojectInfo(UserInfo userInfo, Integer projectId, String name,
+			String number, String masterName, Integer enterpriseId,
+			String enterpriseName, double funds, Date startDate, Date endDate,
+			Integer state) {
 		this.userInfo = userInfo;
-		this.projectInfo = projectInfo;
-		this.enterprise = enterprise;
+		this.projectId = projectId;
 		this.name = name;
 		this.number = number;
 		this.masterName = masterName;
+		this.enterpriseId = enterpriseId;
 		this.enterpriseName = enterpriseName;
 		this.funds = funds;
 		this.startDate = startDate;
@@ -60,21 +60,20 @@ public class SubprojectInfo implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public SubprojectInfo(UserInfo userInfo, ProjectInfo projectInfo,
-			Enterprise enterprise, String name, String number,
-			String masterName, String enterpriseName, double funds,
-			Date startDate, Date endDate, Integer state,
-			Set reProjectDocuments, Set reSubprojectUsers,
+	public SubprojectInfo(UserInfo userInfo, Integer projectId, String name,
+			String number, String masterName, Integer enterpriseId,
+			String enterpriseName, double funds, Date startDate, Date endDate,
+			Integer state, Set reProjectDocuments, Set reSubprojectUsers,
 			Set reProjectThesisUsers, Set reProjectSoftwares,
 			Set reProjectSoftwareUsers, Set reSubprojectEnterprises,
 			Set discussions, Set reProjectPatents, Set reProjectPatentUsers,
 			Set reProjectDocumentUsers) {
 		this.userInfo = userInfo;
-		this.projectInfo = projectInfo;
-		this.enterprise = enterprise;
+		this.projectId = projectId;
 		this.name = name;
 		this.number = number;
 		this.masterName = masterName;
+		this.enterpriseId = enterpriseId;
 		this.enterpriseName = enterpriseName;
 		this.funds = funds;
 		this.startDate = startDate;
@@ -110,20 +109,12 @@ public class SubprojectInfo implements java.io.Serializable {
 		this.userInfo = userInfo;
 	}
 
-	public ProjectInfo getProjectInfo() {
-		return this.projectInfo;
+	public Integer getProjectId() {
+		return this.projectId;
 	}
 
-	public void setProjectInfo(ProjectInfo projectInfo) {
-		this.projectInfo = projectInfo;
-	}
-
-	public Enterprise getEnterprise() {
-		return this.enterprise;
-	}
-
-	public void setEnterprise(Enterprise enterprise) {
-		this.enterprise = enterprise;
+	public void setProjectId(Integer projectId) {
+		this.projectId = projectId;
 	}
 
 	public String getName() {
@@ -148,6 +139,14 @@ public class SubprojectInfo implements java.io.Serializable {
 
 	public void setMasterName(String masterName) {
 		this.masterName = masterName;
+	}
+
+	public Integer getEnterpriseId() {
+		return this.enterpriseId;
+	}
+
+	public void setEnterpriseId(Integer enterpriseId) {
+		this.enterpriseId = enterpriseId;
 	}
 
 	public String getEnterpriseName() {

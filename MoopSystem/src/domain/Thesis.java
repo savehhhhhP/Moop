@@ -1,6 +1,5 @@
 package domain;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,14 +12,16 @@ public class Thesis implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
+	private ProjectInfo projectInfo;
 	private UserInfo userInfo;
 	private String author;
 	private String topic;
 	private String organization;
-	private Date publishDate;
+	private String publishDate;
 	private Integer pagination;
-	private String absract;
+	private String abstractContent;
 	private String keyWords;
+	private String thesisPath;
 	private Set reProjectThesises = new HashSet(0);
 	private Set reProjectThesisUsers = new HashSet(0);
 
@@ -31,32 +32,37 @@ public class Thesis implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Thesis(UserInfo userInfo, String author, String topic,
-			String organization, Date publishDate, Integer pagination,
-			String absract, String keyWords) {
+	public Thesis(ProjectInfo projectInfo, UserInfo userInfo, String author,
+			String topic, String organization, String publishDate,
+			Integer pagination, String abstractContent, String keyWords,
+			String thesisPath) {
+		this.projectInfo = projectInfo;
 		this.userInfo = userInfo;
 		this.author = author;
 		this.topic = topic;
 		this.organization = organization;
 		this.publishDate = publishDate;
 		this.pagination = pagination;
-		this.absract = absract;
+		this.abstractContent = abstractContent;
 		this.keyWords = keyWords;
+		this.thesisPath = thesisPath;
 	}
 
 	/** full constructor */
-	public Thesis(UserInfo userInfo, String author, String topic,
-			String organization, Date publishDate, Integer pagination,
-			String absract, String keyWords, Set reProjectThesises,
-			Set reProjectThesisUsers) {
+	public Thesis(ProjectInfo projectInfo, UserInfo userInfo, String author,
+			String topic, String organization, String publishDate,
+			Integer pagination, String abstractContent, String keyWords,
+			String thesisPath, Set reProjectThesises, Set reProjectThesisUsers) {
+		this.projectInfo = projectInfo;
 		this.userInfo = userInfo;
 		this.author = author;
 		this.topic = topic;
 		this.organization = organization;
 		this.publishDate = publishDate;
 		this.pagination = pagination;
-		this.absract = absract;
+		this.abstractContent = abstractContent;
 		this.keyWords = keyWords;
+		this.thesisPath = thesisPath;
 		this.reProjectThesises = reProjectThesises;
 		this.reProjectThesisUsers = reProjectThesisUsers;
 	}
@@ -69,6 +75,14 @@ public class Thesis implements java.io.Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public ProjectInfo getProjectInfo() {
+		return this.projectInfo;
+	}
+
+	public void setProjectInfo(ProjectInfo projectInfo) {
+		this.projectInfo = projectInfo;
 	}
 
 	public UserInfo getUserInfo() {
@@ -103,11 +117,11 @@ public class Thesis implements java.io.Serializable {
 		this.organization = organization;
 	}
 
-	public Date getPublishDate() {
+	public String getPublishDate() {
 		return this.publishDate;
 	}
 
-	public void setPublishDate(Date publishDate) {
+	public void setPublishDate(String publishDate) {
 		this.publishDate = publishDate;
 	}
 
@@ -119,12 +133,12 @@ public class Thesis implements java.io.Serializable {
 		this.pagination = pagination;
 	}
 
-	public String getAbsract() {
-		return this.absract;
+	public String getAbstractContent() {
+		return this.abstractContent;
 	}
 
-	public void setAbsract(String absract) {
-		this.absract = absract;
+	public void setAbstractContent(String abstractContent) {
+		this.abstractContent = abstractContent;
 	}
 
 	public String getKeyWords() {
@@ -133,6 +147,14 @@ public class Thesis implements java.io.Serializable {
 
 	public void setKeyWords(String keyWords) {
 		this.keyWords = keyWords;
+	}
+
+	public String getThesisPath() {
+		return this.thesisPath;
+	}
+
+	public void setThesisPath(String thesisPath) {
+		this.thesisPath = thesisPath;
 	}
 
 	public Set getReProjectThesises() {

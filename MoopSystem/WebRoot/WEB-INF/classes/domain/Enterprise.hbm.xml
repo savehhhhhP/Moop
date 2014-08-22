@@ -45,15 +45,9 @@
         </set>
         <set name="userInfos" inverse="true">
             <key>
-                <column name="EnterpriseID" />
-            </key>
-            <one-to-many class="domain.UserInfo" />
-        </set>
-        <set name="reProjectThesisUsers" inverse="true">
-            <key>
                 <column name="EnterpriseID" not-null="true" />
             </key>
-            <one-to-many class="domain.ReProjectThesisUser" />
+            <one-to-many class="domain.UserInfo" />
         </set>
         <set name="reEnterpriseUsers" inverse="true">
             <key>
@@ -61,23 +55,11 @@
             </key>
             <one-to-many class="domain.ReEnterpriseUser" />
         </set>
-        <set name="subprojectInfos" inverse="true">
-            <key>
-                <column name="EnterpriseID" not-null="true" />
-            </key>
-            <one-to-many class="domain.SubprojectInfo" />
-        </set>
         <set name="projectInfos" inverse="true">
             <key>
-                <column name="EnterpriseID" />
-            </key>
-            <one-to-many class="domain.ProjectInfo" />
-        </set>
-        <set name="reProjectDocumentUsers" inverse="true">
-            <key>
                 <column name="EnterpriseID" not-null="true" />
             </key>
-            <one-to-many class="domain.ReProjectDocumentUser" />
+            <one-to-many class="domain.ProjectInfo" />
         </set>
     </class>
 </hibernate-mapping>

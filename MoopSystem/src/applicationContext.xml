@@ -11,41 +11,36 @@
 		<property name="url"
 			value="jdbc:sqlserver://localhost:1433;DatabaseName=MOOP" />
 		<!-- 指定连接数据库的用户名 -->
-		<property name="username" >
+		<property name="username">
 			<value>sa</value>
 		</property>
 		<!-- 指定连接数据库的密码 -->
 		<property name="password">
-            <value>sa</value>
-        </property>
-         <property name="maxActive" value="100"></property>
-        <!--最大空闲连接 -->
-        <property name="maxIdle" value="30"></property>
-        <!-- 最大等待连接 -->
-        <property name="maxWait" value="500"></property>
-        <!-- 默认最大提交，TRUE，每操作一次数据库自动提交 
-        <property name="defaultAutoCommit" value="true"></property>-->
-        
+			<value>sa</value>
+		</property>
+		<property name="maxActive" value="100"></property>
+		<!--最大空闲连接 -->
+		<property name="maxIdle" value="30"></property>
+		<!-- 最大等待连接 -->
+		<property name="maxWait" value="500"></property>
+		<!-- 默认最大提交，TRUE，每操作一次数据库自动提交 <property name="defaultAutoCommit" value="true"></property> -->
+
 	</bean>
 
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<!-- 数据源 -->
 		<property name="dataSource">
-			<ref bean="dataSource"/> 
+			<ref bean="dataSource" />
 		</property>
-		
+
 		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
 
-<!-- 		<property name="mappingResources">
-		</property> -->
+		<!-- <property name="mappingResources"> </property> -->
 	</bean>
 
-  <!--   <bean id="userDAO" class="dao.UserDAOImpl">
-		<property name="sessionFactory">
-			<ref local="sessionFactory"></ref>
-		</property>
-	</bean> -->
+	<!-- <bean id="userDAO" class="dao.UserDAOImpl"> <property name="sessionFactory"> 
+		<ref local="sessionFactory"></ref> </property> </bean> -->
 
 
 	<bean id="userDAO" class="dao.UserDAOImpl">
@@ -63,16 +58,16 @@
 			<ref bean="userService"></ref>
 		</property>
 	</bean>
-	
+
 	<bean id="register" class="action.RegisterAction">
 		<property name="userService">
-			<ref bean="userService"/>
+			<ref bean="userService" />
 		</property>
 		<property name="enterpriseService">
-		<ref bean="enterpriseService"/>
+			<ref bean="enterpriseService" />
 		</property>
 	</bean>
-	
+
 	<bean id="projectTypeDAO" class="dao.ProjectTypeDAOImpl">
 		<property name="sessionFactory">
 			<ref local="sessionFactory" />
@@ -90,8 +85,8 @@
 			<ref bean="projectTypeService" />
 		</property>
 	</bean>
-	
-	
+
+
 	<bean id="enterpriseDAO" class="dao.EnterpriseDAOImpl">
 		<property name="sessionFactory">
 			<ref local="sessionFactory" />
@@ -109,7 +104,7 @@
 			<ref bean="enterpriseService" />
 		</property>
 	</bean>
-	
+
 	<bean id="projectStateDAO" class="dao.ProjectStateDAOImpl">
 		<property name="sessionFactory">
 			<ref local="sessionFactory" />
@@ -127,7 +122,7 @@
 			<ref bean="projectStateService" />
 		</property>
 	</bean>
-	
+
 	<bean id="projectDAO" class="dao.ProjectDAOImpl">
 		<property name="sessionFactory">
 			<ref local="sessionFactory" />
@@ -139,33 +134,35 @@
 			<ref bean="projectDAO"></ref>
 		</property>
 	</bean>
-	
+
 	<bean id="uploadImageFile" class="function.UploadImageFileImpl">
 	</bean>
-	
+	<bean id="uploadOtherFile" class="function.UploadOtherFileImpl">
+	</bean>
+
 	<bean id="createnewproject" class="action.CreateNewProjectAction">
 		<property name="projectService">
 			<ref bean="projectService" />
 		</property>
 		<property name="userService">
-		<ref bean="userService"/>
+			<ref bean="userService" />
 		</property>
 		<property name="enterpriseService">
-		<ref bean="enterpriseService"/>
+			<ref bean="enterpriseService" />
 		</property>
 		<property name="projectTypeService">
-		<ref bean="projectTypeService"/>
+			<ref bean="projectTypeService" />
 		</property>
 		<property name="projectStateService">
-		<ref bean="projectStateService"/>
+			<ref bean="projectStateService" />
 		</property>
 		<property name="uploadImageFile">
-		<ref bean="uploadImageFile"/>
+			<ref bean="uploadImageFile" />
 		</property>
 	</bean>
-	
+
 	<bean id="getmanageprojectlist" class="action.GetManageProjectListAction">
-	<property name="projectService">
+		<property name="projectService">
 			<ref bean="projectService" />
 		</property>
 		<property name="userService">
@@ -173,30 +170,131 @@
 		</property>
 	</bean>
 	
+	<bean name="reProjectUserDAO" class="dao.ReProjectUserDAOImpl">
+	<property name="sessionFactory">
+	<ref local="sessionFactory"/>
+	</property>
+	</bean>
+	<bean name="reProjectUserService" class="service.ReProjectUserServiceImpl">
+	<property name="reProjectUserDAO">
+	<ref bean="reProjectUserDAO"/>
+	</property>
+	</bean>
+
 	<bean id="displayindexpage" class="action.GetIndexPageInfoAction">
-	<property name="projectService">
-	<ref bean ="projectService"/>
-	</property>
+		<property name="projectService">
+			<ref bean="projectService" />
+		</property>
 	</bean>
-	
+
 	<bean id="getmanageprojectinfo" class="action.GetManageProjectInfoAction">
-	<property name="projectService">
-	<ref bean="projectService"></ref></property>
+		<property name="projectService">
+			<ref bean="projectService"></ref>
+		</property>
+		<property name="reProjectUserService">
+		<ref bean="reProjectUserService"/>
+		</property>
 	</bean>
-	
+
 	<bean id="updateproject" class="action.UpdateProjectAction">
-	<property name="projectService">
-	<ref bean="projectService"></ref>
-	</property>
-	<property name="enterpriseService">
-	<ref bean="enterpriseService"/>
-	</property>
-	<property name="projectTypeService">
-	<ref bean="projectTypeService"/>
-	</property>
-	<property name="projectStateService">
-	<ref bean="projectStateService"/>
+		<property name="projectService">
+			<ref bean="projectService"></ref>
+		</property>
+		<property name="enterpriseService">
+			<ref bean="enterpriseService" />
+		</property>
+		<property name="projectTypeService">
+			<ref bean="projectTypeService" />
+		</property>
+		<property name="projectStateService">
+			<ref bean="projectStateService" />
+		</property>
+	</bean>
+
+	<bean id="patentDAO" class="dao.PatentDAOImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"></ref>
+		</property>
+	</bean>
+
+	<bean id="patentService" class="service.PatentServiceImpl">
+		<property name="patentDAO">
+			<ref bean="patentDAO" />
+		</property>
+	</bean>
+
+
+	<bean id="uplaodfile" class="action.UploadFileAction">
+		<property name="patentService">
+			<ref bean="patentService"></ref>
+		</property>
+		<property name="thesisService">
+			<ref bean="thesisService"></ref>
+		</property>
+			<property name="documentService">
+			<ref bean="documentService"></ref>
+		</property>
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+		<property name="projectService">
+			<ref bean="projectService"></ref>
+		</property>
+		<property name="uploadOtherFile">
+			<ref bean="uploadOtherFile" />
+		</property>
+	</bean>
+	
+	<bean id="thesisDAO" class="dao.ThesisDAOImpl">
+	<property name="sessionFactory">
+	<ref local="sessionFactory"></ref>
 	</property>
 	</bean>
 	
+	<bean id="thesisService" class="service.ThesisServiceImpl">
+	<property name="thesisDAO">
+	<ref bean="thesisDAO"/>
+	</property>
+	</bean>
+	
+	<bean id="documentDAO" class="dao.DocumentDAOImpl">
+	<property name="sessionFactory">
+	<ref local="sessionFactory"/>
+	</property>
+	</bean>
+	
+	<bean id="documentService" class="service.DocumentServiceImpl">
+	<property name="documentDAO">
+	<ref bean="documentDAO"/>
+	</property></bean>
+	
+	<bean id="getprojectfilelist" class="action.GetProjectFileListAction">
+	<property name="patentService">
+	<ref bean="patentService"/>
+	</property>
+	<property name="userService">
+	<ref bean="userService"/>
+	</property>
+	</bean>
+	
+	<bean id="getthesislist" class="action.GetThesisListAction">
+	<property name="userService">
+	<ref bean="userService"></ref>
+	</property>
+	<property name="thesisService">
+	<ref bean="thesisService"/>
+	</property>
+	</bean>
+	
+	<bean id="getdocumentlist" class="action.GetDocumentListAction">
+	<property name="userService">
+	<ref bean="userService"></ref>
+	</property>
+	<property name="documentService">
+	<ref bean="documentService"/>
+	</property>
+	</bean>
+	
+	<bean id="download" class="action.downloadAction">
+	</bean>
 </beans>

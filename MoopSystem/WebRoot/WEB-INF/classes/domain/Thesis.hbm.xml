@@ -6,33 +6,39 @@
 -->
 <hibernate-mapping>
     <class name="domain.Thesis" table="Thesis" schema="dbo" catalog="moop" lazy="false">
-        <id name="id" type="integer">
+        <id name="id" type="java.lang.Integer">
             <column name="ID" />
             <generator class="native" />
         </id>
-        <many-to-one name="userInfo" class="domain.UserInfo" fetch="select">
-            <column name="AuthorID" not-null="true" />
+        <many-to-one name="projectInfo" class="domain.ProjectInfo" fetch="select">
+            <column name="ProjectID" not-null="true" />
         </many-to-one>
-        <property name="author" type="string">
+        <many-to-one name="userInfo" class="domain.UserInfo" fetch="select">
+            <column name="UserID" not-null="true" />
+        </many-to-one>
+        <property name="author" type="java.lang.String">
             <column name="Author" not-null="true" />
         </property>
-        <property name="topic" type="string">
+        <property name="topic" type="java.lang.String">
             <column name="Topic" not-null="true" />
         </property>
-        <property name="organization" type="string">
+        <property name="organization" type="java.lang.String">
             <column name="Organization" not-null="true" />
         </property>
-        <property name="publishDate" type="date">
+        <property name="publishDate" type="java.lang.String">
             <column name="PublishDate" length="10" not-null="true" />
         </property>
-        <property name="pagination" type="integer">
+        <property name="pagination" type="java.lang.Integer">
             <column name="Pagination" not-null="true" />
         </property>
-        <property name="absract" type="string">
-            <column name="Absract" not-null="true" />
+        <property name="abstractContent" type="java.lang.String">
+            <column name="AbstractContent" not-null="true" />
         </property>
-        <property name="keyWords" type="string">
+        <property name="keyWords" type="java.lang.String">
             <column name="KeyWords" not-null="true" />
+        </property>
+        <property name="thesisPath" type="java.lang.String">
+            <column name="ThesisPath" not-null="true" />
         </property>
         <set name="reProjectThesises" inverse="true">
             <key>

@@ -1,6 +1,6 @@
 $('type').ready(
 		function() {
-			//È¡µÃÑ§Ğ£·ÅÈëÏÂÀ­¿ò
+			// å–å¾—å­¦æ ¡æ”¾å…¥ä¸‹æ‹‰æ¡†
 			$.ajax({
 				type : "post",
 				url : "getprojecttype.action",
@@ -16,14 +16,14 @@ $('type').ready(
 					}
 				},
 				error : function(XMLHttpRequest, textStatus, errorThrown) {
-					alert(" ddd" + "ajaxÈ¡Ñ§Ğ£ĞÅÏ¢³ö´í-" + errorThrown + "fff");
+					alert(" ddd" + "ajaxå–å­¦æ ¡ä¿¡æ¯å‡ºé”™-" + errorThrown + "fff");
 				}
 			});
 		});
 
 $('enterpriseName').ready(
 		function() {
-			//È¡µÃÑ§Ğ£·ÅÈëÏÂÀ­¿ò
+			// å–å¾—å­¦æ ¡æ”¾å…¥ä¸‹æ‹‰æ¡†
 			$.ajax({
 				type : "post",
 				url : "getprojectenterprise.action",
@@ -39,14 +39,14 @@ $('enterpriseName').ready(
 					}
 				},
 				error : function(XMLHttpRequest, textStatus, errorThrown) {
-					alert(" ddd" + "ajaxÈ¡Ñ§Ğ£ĞÅÏ¢³ö´í-" + errorThrown + "fffff");
+					alert(" ddd" + "ajaxå–å­¦æ ¡ä¿¡æ¯å‡ºé”™-" + errorThrown + "fffff");
 				}
 			});
 		});
 
 $('state').ready(
 		function() {
-			//È¡µÃÑ§Ğ£·ÅÈëÏÂÀ­¿ò
+			// å–å¾—å­¦æ ¡æ”¾å…¥ä¸‹æ‹‰æ¡†
 			$.ajax({
 				type : "post",
 				url : "getprojectstate.action",
@@ -62,52 +62,117 @@ $('state').ready(
 					}
 				},
 				error : function(XMLHttpRequest, textStatus, errorThrown) {
-					alert(" ddd" + "ajaxÈ¡Ñ§Ğ£ĞÅÏ¢³ö´í-" + errorThrown + "ddddd");
+					alert(" ddd" + "ajaxå–å­¦æ ¡ä¿¡æ¯å‡ºé”™-" + errorThrown + "ddddd");
 				}
 			});
 		});
 
 $('isPublic').ready(function() {
 	var object = document.getElementById('isPublic');
-	if (object.options[0].value == "·ñ") {
-		object.options.add(new Option("ÊÇ", "ÊÇ"));
+	if (object.options[0].value == "å¦") {
+		object.options.add(new Option("æ˜¯", "æ˜¯"));
 	} else {
-		object.options.add(new Option("·ñ", "·ñ"));
+		object.options.add(new Option("å¦", "å¦"));
 	}
 });
 
 //
 
-$(document).ready(function() {
-	$('#updateproject-form').bind('submit', function() {
-		ajaxSubmit(this, function(data) {
-			alert("success");
-		});
-		return false;
-	});
-	$('#fileType').change(function() {
-//		if ($('#document').attr("selected") == true) {
-//			alert("123");
-//		} else {
-//			alert("222");
-//		}
-		
-		if($('#fileType option:selected').val() == "patent"){
-			$('#patentTitle').css("display","block");
-		}
-		else{
-			$('#patentTitle').css("display","none");
-		}
-		
-		if($(this).val() == "document"){
-			$('#fileType').css("width","30%");
-			var s = "<input type='text' value='ddd'></input>";
-			$('#type').append("<input type='text' value='ddd'/>");
-		}
-	});
-});
+$(document)
+		.ready(
+				function() {
+					// var options={
+					// beforeSubmit: showRequest,
+					// url:"uploadfile.action",
+					// type:"post",
+					// };
+					//					
+					// $('#uploadFileForm1').ajaxForm(options);
 
-//½«form×ªÎªAJAXÌá½»
+					// $('#uploadFileForm1').bind('submit', function() {
+					// alert("ddd");
+					// ajaxSubmit(this, function(data) {
+					// alert("succcess");
+					// });
+					// return false;
+					// });
+
+					$('#updateprojectForm').bind('submit', function() {
+						ajaxSubmit(this, function(data) {
+							alert("success");
+						});
+						return false;
+					});
+					//
+					$('#formSummitButton').click(
+							function() {
+								$('#uploadFileForm1').attr("action",
+										"uploadfile.action").submit();
+								// $('#uploadFileForm1').attr("action","uploadfile.action");
+								// $('#uploadFileForm1').attr("method","post");
+								// ajaxSubmit($('#uploadFileForm1'),
+								// function(data) {
+								// alert("succcess");
+								// });
+								return false;
+							});
+
+					$('#fileType')
+							.change(
+									function() {
+										if ($('#fileType option:selected')
+												.val() == "patent") {
+											$('#patentNumLi').css("display",
+													"block");
+											$('#patentDateLi').css("display",
+													"block");
+											$('#patentOrgLi').css("display",
+													"block");
+
+											$('#thesisOrgLi').css("display",
+													"none");
+											$('#thesisDateLi').css("display",
+													"none");
+											$('#thesisPaginationLi').css(
+													"display", "none");
+										} else if (($(
+												'#fileType option:selected')
+												.val() == "document")
+												|| ($(
+														'#fileType option:selected')
+														.val() == "-1")) {
+											$('#patentNumLi').css("display",
+													"none");
+											$('#patentDateLi').css("display",
+													"none");
+											$('#patentOrgLi').css("display",
+													"none");
+											$('#thesisOrgLi').css("display",
+													"none");
+											$('#thesisDateLi').css("display",
+													"none");
+											$('#thesisPaginationLi').css(
+													"display", "none");
+										} else if ($(
+												'#fileType option:selected')
+												.val() == "thesis") {
+											$('#thesisOrgLi').css("display",
+													"block");
+											$('#thesisDateLi').css("display",
+													"block");
+											$('#thesisPaginationLi').css(
+													"display", "block");
+											$('#patentNumLi').css("display",
+													"none");
+											$('#patentDateLi').css("display",
+													"none");
+											$('#patentOrgLi').css("display",
+													"none");
+										}
+									});
+				});
+
+// å°†formè½¬ä¸ºAJAXæäº¤
 function ajaxSubmit(frm, fn) {
 	var dataPara = getFormJson(frm);
 	$.ajax({
@@ -143,15 +208,15 @@ function selectfile() {
 function readFile(fileBrowser) {
 	alert(navigator.userAgent.toLowerCase());
 	alert(navigator.userAgent.indexOf("msie"));
-	if (navigator.userAgent.indexOf("MSIE") == -1) // ä¯ÀÀÆ÷ÎªIE ÓĞ†–î}
+	if (navigator.userAgent.indexOf("MSIE") == -1) // æµè§ˆå™¨ä¸ºIE æœ‰å•é¡Œ
 		readFileIE(fileBrowser);
 	else if (navigator.userAgent.indexOf("Firefox") > 0
-			|| navigator.userAgent.indexOf("Mozilla") > 0) // ä¯ÀÀÆ÷Îªfirefox
+			|| navigator.userAgent.indexOf("Mozilla") > 0) // æµè§ˆå™¨ä¸ºfirefox
 		readFileFirefox(fileBrowser);
 	else
 		alert("Not IE or Firefox (userAgent=" + navigator.userAgent + ")");
 }
-// firefox»ñÈ¡ÎÄ¼şÈ«Â·¾¶µÄ·½·¨
+// firefoxè·å–æ–‡ä»¶å…¨è·¯å¾„çš„æ–¹æ³•
 function readFileFirefox(fileBrowser) {
 	try {
 		netscape.security.PrivilegeManager
@@ -183,9 +248,149 @@ function readFileFirefox(fileBrowser) {
 	alert(file.path); // I test to get the local file's path.
 	document.getElementById("project.picturePath").value = file.path;
 }
-// IE»ñÈ¡ÎÄ¼şÈ«Â·¾¶·½·¨
+// IEè·å–æ–‡ä»¶å…¨è·¯å¾„æ–¹æ³•
 function readFileIE(fileBrowser) {
 	var path = fileBrowser.value;
 	document.getElementById("filePath").value = path;
 
 }
+
+// åˆå§‹åŒ–ç®¡ç†é¡¹ç›®èµ„æºé¡µé¢ ä½¿ç”¨ajaxè·å–æ•°æ®ååœ¨å‰å°æ˜¾ç¤º
+$('patentList')
+		.ready(
+				function() {
+					var projectId = $('#id').val();
+					var userEmail = $('#user')[0].innerText.trim();
+					$
+							.ajax({
+								type : "post",
+								url : "getprojectfilelist.action",
+								data : {
+									"projectId" : projectId
+								},
+								dataType : "json",
+								success : function(data) {
+									var content = "";
+									if (data.length > 0) {
+										for ( var i = 0; i < data.length; i++) {
+											var str = "<a href='' target='_blank'>&nbsp;delete</a></div></div></li>";
+											for ( var j = 0; j < data[i].length; j++) {
+												content += "<li class='media'><div class='media-body'><div class='mbs'>" 
+													    +"<a href='download.action?"
+													    + "filePath=" + data[i][j]['patentPath'] + "&fileName=" + data[i][j]['name'] +"'>"
+														+ data[i][j]['name']
+														+ "</a></div><div class='text-sm'>"
+														+ "<span class='text-muted'>applyDate:"
+														+ data[i][j]['applyDate']
+														+ "</span><span class='bullet'>â€¢</span> <span class='text-muted'>patent</span>";
+												if (data[i][j]['userEmail']
+														.trim() == userEmail) {
+													content += str;
+												} else {
+													content += "</div></div></li>";
+												}
+											}
+										}
+									} else {
+										content = "æš‚æ— å†…å®¹";
+									}
+									$('#patentList')[0].innerHTML = content;
+								},
+								error : function(XMLHttpRequest, textStatus,
+										errorThrown) {
+									alert("no data" + errorThrown);
+								}
+							});
+				});
+
+$('thesisList')
+		.ready(
+				function() {
+					var projectId = $('#id').val();
+					var userEmail = $('#user')[0].innerText.trim();
+					$
+							.ajax({
+								type : "post",
+								url : "getthesislist.action",
+								data : {
+									"projectId" : projectId
+								},
+								dataType : "json",
+								success : function(data) {
+									var content = "";
+									if (data.length > 0) {
+										for ( var i = 0; i < data.length; i++) {
+											var str = "<a href='' target='_blank'>&nbsp;delete</a></div></div></li>";
+											for ( var j = 0; j < data[i].length; j++) {
+												content += "<li class='media'><div class='media-body'><div class='mbs'>" 
+													    + "<a href='download.action?filePath=" + data[i][j]['thesisPath'] 
+												        + "&fileName=" + data[i][j]['name'] +"' target='_blank'>"
+														+ data[i][j]['name']
+														+ "</a></div><div class='text-sm'>"
+														+ "<span class='text-muted'>publishDate:"
+														+ data[i][j]['publishDate']
+														+ "</span><span class='bullet'>â€¢</span> <span class='text-muted'>thesis</span>";
+												if (data[i][j]['userEmail']
+														.trim() == userEmail) {
+													content += str;
+												} else {
+													content += "</div></div></li>";
+												}
+											}
+										}
+									} else {
+										content = "æš‚æ— å†…å®¹";
+									}
+									$('#thesisList')[0].innerHTML = content;
+								},
+								error : function(XMLHttpRequest, textStatus,
+										errorThrown) {
+									alert("no data" + errorThrown);
+								},
+							});
+				});
+
+$('documentList')
+		.ready(
+				function() {
+					var projectId = $('#id').val();
+					var userEmail = $('#user')[0].innerText.trim();
+					$
+							.ajax({
+								type : "post",
+								url : "getdocumentlist.action",
+								data : {
+									"projectId" : projectId
+								},
+								dataType : "json",
+								success : function(data) {
+									var content = "";
+									if (data.length > 0) {
+										for ( var i = 0; i < data.length; i++) {
+											var str = "<a href='' target='_blank'>&nbsp;delete</a></div></div></li>";
+											for ( var j = 0; j < data[i].length; j++) {
+												content += "<li class='media'><div class='media-body'><div class='mbs'>"
+													    +"<a href='download.action?filePath=" + data[i][j]['documentPath'] 
+												        + "&fileName=" + data[i][j]['name'] + "' target='_blank'>"
+														+ data[i][j]['name']
+														+ "</a></div><div class='text-sm'>"
+														+ "<span class='text-muted'>document</span>";
+												if (data[i][j]['userEmail']
+														.trim() == userEmail) {
+													content += str;
+												} else {
+													content += "</div></div></li>";
+												}
+											}
+										}
+									} else {
+										content = "æš‚æ— å†…å®¹";
+									}
+									$('#documentList')[0].innerHTML = content;
+								},
+								error : function(XMLHttpRequest, textStatus,
+										errorThrown) {
+									alert("no data" + errorThrown);
+								}
+							});
+				});

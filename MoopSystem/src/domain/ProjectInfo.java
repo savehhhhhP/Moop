@@ -27,19 +27,18 @@ public class ProjectInfo implements java.io.Serializable {
 	private String introduction;
 	private String picturePath;
 	private Set reSubprojectUsers = new HashSet(0);
+	private Set documents = new HashSet(0);
 	private Set reProjectThesisUsers = new HashSet(0);
 	private Set reProjectUsers = new HashSet(0);
 	private Set reProjectThesises = new HashSet(0);
 	private Set reProjectDocuments = new HashSet(0);
 	private Set reProjectEnterprises = new HashSet(0);
 	private Set reProjectPatents = new HashSet(0);
-	private Set reProjectPatentUsers = new HashSet(0);
-	private Set reProjectDocumentUsers = new HashSet(0);
 	private Set reProjectSoftwares = new HashSet(0);
 	private Set reSubprojectEnterprises = new HashSet(0);
-	private Set reProjectSoftwareUsers = new HashSet(0);
+	private Set thesises = new HashSet(0);
+	private Set patents = new HashSet(0);
 	private Set discussions = new HashSet(0);
-	private Set subprojectInfos = new HashSet(0);
 	private Set projectExtendInfos = new HashSet(0);
 
 	// Constructors
@@ -48,64 +47,59 @@ public class ProjectInfo implements java.io.Serializable {
 	public ProjectInfo() {
 	}
 
+	/** minimal constructor */
+	public ProjectInfo(UserInfo userInfo, Enterprise enterprise, String name,
+			String masterName, String enterpriseName) {
+		this.userInfo = userInfo;
+		this.enterprise = enterprise;
+		this.name = name;
+		this.masterName = masterName;
+		this.enterpriseName = enterpriseName;
+	}
 	
 	
-	public ProjectInfo(String name, String number, ProjectType projectType, Enterprise enterprise, 
-			String startDate, String endDate, double funds, String isPublic, ProjectState projectState,
-			String introduction){
-		super();
+	/** minimal constructor */
+	public ProjectInfo(Integer id, String name, String introduction, String picturePath) {
+		this.id = id;
+		this.name = name;
+		this.introduction = introduction;
+		this.picturePath = picturePath;
+	}
+	public ProjectInfo(String name, String number, ProjectType projectType,
+			Enterprise enterprise, String startDate, String endDate,double funds, String isPublic,
+			ProjectState projectState, String introduction) {
+		this.projectType = projectType;
+		this.projectState = projectState;
+		this.enterprise = enterprise;
 		this.name = name;
 		this.number = number;
-		this.projectType = projectType;
-		this.enterprise = enterprise;
+		this.funds = funds;
 		this.startDate = startDate;
 		this.endDate = endDate;
-		this.funds = funds;
 		this.isPublic = isPublic;
-		this.projectState = projectState;
 		this.introduction = introduction;
 	}
 	
 	
-	
-	public ProjectInfo(UserInfo userInfo, String name, String introduction, String picturePath){
-		super();
-		this.userInfo = userInfo;
+	/** minimal constructor */
+	public ProjectInfo(String name, String introduction, String picturePath) {
 		this.name = name;
 		this.introduction = introduction;
 		this.picturePath = picturePath;
 	}
 	
 
-	
-	
-	public ProjectInfo(Integer id, String name, String introduction, String picturePath){
-		super();
-		this.id = id;
-		this.name = name;
-		this.introduction = introduction;
-		this.picturePath = picturePath;
-	}
-	
-	public ProjectInfo(String name, String introduction, String picturePath){
-		super();
-		this.name = name;
-		this.introduction = introduction;
-		this.picturePath = picturePath;
-	}
 	/** full constructor */
 	public ProjectInfo(UserInfo userInfo, ProjectType projectType,
 			ProjectState projectState, Enterprise enterprise, String name,
 			String number, String masterName, String enterpriseName,
 			double funds, String startDate, String endDate, String isPublic,
 			String introduction, String picturePath, Set reSubprojectUsers,
-			Set reProjectThesisUsers, Set reProjectUsers,
+			Set documents, Set reProjectThesisUsers, Set reProjectUsers,
 			Set reProjectThesises, Set reProjectDocuments,
 			Set reProjectEnterprises, Set reProjectPatents,
-			Set reProjectPatentUsers, Set reProjectDocumentUsers,
-			Set reProjectSoftwares, Set reSubprojectEnterprises,
-			Set reProjectSoftwareUsers, Set discussions, Set subprojectInfos,
-			Set projectExtendInfos) {
+			Set reProjectSoftwares, Set reSubprojectEnterprises, Set thesises,
+			Set patents, Set discussions, Set projectExtendInfos) {
 		this.userInfo = userInfo;
 		this.projectType = projectType;
 		this.projectState = projectState;
@@ -121,19 +115,18 @@ public class ProjectInfo implements java.io.Serializable {
 		this.introduction = introduction;
 		this.picturePath = picturePath;
 		this.reSubprojectUsers = reSubprojectUsers;
+		this.documents = documents;
 		this.reProjectThesisUsers = reProjectThesisUsers;
 		this.reProjectUsers = reProjectUsers;
 		this.reProjectThesises = reProjectThesises;
 		this.reProjectDocuments = reProjectDocuments;
 		this.reProjectEnterprises = reProjectEnterprises;
 		this.reProjectPatents = reProjectPatents;
-		this.reProjectPatentUsers = reProjectPatentUsers;
-		this.reProjectDocumentUsers = reProjectDocumentUsers;
 		this.reProjectSoftwares = reProjectSoftwares;
 		this.reSubprojectEnterprises = reSubprojectEnterprises;
-		this.reProjectSoftwareUsers = reProjectSoftwareUsers;
+		this.thesises = thesises;
+		this.patents = patents;
 		this.discussions = discussions;
-		this.subprojectInfos = subprojectInfos;
 		this.projectExtendInfos = projectExtendInfos;
 	}
 
@@ -267,6 +260,14 @@ public class ProjectInfo implements java.io.Serializable {
 		this.reSubprojectUsers = reSubprojectUsers;
 	}
 
+	public Set getDocuments() {
+		return this.documents;
+	}
+
+	public void setDocuments(Set documents) {
+		this.documents = documents;
+	}
+
 	public Set getReProjectThesisUsers() {
 		return this.reProjectThesisUsers;
 	}
@@ -315,22 +316,6 @@ public class ProjectInfo implements java.io.Serializable {
 		this.reProjectPatents = reProjectPatents;
 	}
 
-	public Set getReProjectPatentUsers() {
-		return this.reProjectPatentUsers;
-	}
-
-	public void setReProjectPatentUsers(Set reProjectPatentUsers) {
-		this.reProjectPatentUsers = reProjectPatentUsers;
-	}
-
-	public Set getReProjectDocumentUsers() {
-		return this.reProjectDocumentUsers;
-	}
-
-	public void setReProjectDocumentUsers(Set reProjectDocumentUsers) {
-		this.reProjectDocumentUsers = reProjectDocumentUsers;
-	}
-
 	public Set getReProjectSoftwares() {
 		return this.reProjectSoftwares;
 	}
@@ -347,12 +332,20 @@ public class ProjectInfo implements java.io.Serializable {
 		this.reSubprojectEnterprises = reSubprojectEnterprises;
 	}
 
-	public Set getReProjectSoftwareUsers() {
-		return this.reProjectSoftwareUsers;
+	public Set getThesises() {
+		return this.thesises;
 	}
 
-	public void setReProjectSoftwareUsers(Set reProjectSoftwareUsers) {
-		this.reProjectSoftwareUsers = reProjectSoftwareUsers;
+	public void setThesises(Set thesises) {
+		this.thesises = thesises;
+	}
+
+	public Set getPatents() {
+		return this.patents;
+	}
+
+	public void setPatents(Set patents) {
+		this.patents = patents;
 	}
 
 	public Set getDiscussions() {
@@ -361,14 +354,6 @@ public class ProjectInfo implements java.io.Serializable {
 
 	public void setDiscussions(Set discussions) {
 		this.discussions = discussions;
-	}
-
-	public Set getSubprojectInfos() {
-		return this.subprojectInfos;
-	}
-
-	public void setSubprojectInfos(Set subprojectInfos) {
-		this.subprojectInfos = subprojectInfos;
 	}
 
 	public Set getProjectExtendInfos() {
