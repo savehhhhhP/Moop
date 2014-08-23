@@ -1,6 +1,7 @@
 package action;
 
 import java.io.InputStream;  
+import java.io.UnsupportedEncodingException;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -13,9 +14,14 @@ public class downloadAction extends ActionSupport {
     private InputStream fileInput;  
     private String fileName;  
     private String filePath;
-  
     public String getFileName() {  
-        return fileName;  
+    	try {
+			fileName = new String(fileName.getBytes(), "ISO8859-1");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	return fileName;
     }  
   
     public void setFileName(String fileName) {  
@@ -39,9 +45,6 @@ public class downloadAction extends ActionSupport {
 	}
 
 	public String execute() throws Exception{  
-    	HttpServletRequest request = ServletActionContext.getRequest();
-    	filePath = request.getParameter("filePath");
-    	fileName = request.getParameter("fileName");
     	fileInput=ServletActionContext.getServletContext().getResourceAsStream("/" + filePath);  
         return "success";  
     }  

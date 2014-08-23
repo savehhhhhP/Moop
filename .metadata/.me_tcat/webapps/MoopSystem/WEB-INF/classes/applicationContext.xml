@@ -194,6 +194,18 @@
 		<property name="reProjectUserService">
 		<ref bean="reProjectUserService"/>
 		</property>
+		<property name="userService">
+		<ref bean="userService"/>
+		</property>
+		<property name="patentService">
+		<ref bean="patentService"/>
+		</property>
+		<property name="thesisService">
+		<ref bean="thesisService"></ref>
+		</property>
+		<property name="documentService">
+		<ref bean="documentService"/>
+		</property>
 	</bean>
 
 	<bean id="updateproject" class="action.UpdateProjectAction">
@@ -267,33 +279,6 @@
 	<property name="documentDAO">
 	<ref bean="documentDAO"/>
 	</property></bean>
-	
-	<bean id="getprojectfilelist" class="action.GetProjectFileListAction">
-	<property name="patentService">
-	<ref bean="patentService"/>
-	</property>
-	<property name="userService">
-	<ref bean="userService"/>
-	</property>
-	</bean>
-	
-	<bean id="getthesislist" class="action.GetThesisListAction">
-	<property name="userService">
-	<ref bean="userService"></ref>
-	</property>
-	<property name="thesisService">
-	<ref bean="thesisService"/>
-	</property>
-	</bean>
-	
-	<bean id="getdocumentlist" class="action.GetDocumentListAction">
-	<property name="userService">
-	<ref bean="userService"></ref>
-	</property>
-	<property name="documentService">
-	<ref bean="documentService"/>
-	</property>
-	</bean>
 	
 	<bean id="download" class="action.downloadAction">
 	</bean>

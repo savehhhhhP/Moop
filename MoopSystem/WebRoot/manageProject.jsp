@@ -65,17 +65,13 @@
 								<ul class="nav nav-tabs course-dashboard-tabs clearfix"
 									id="course-tabs">
 									<li class="active"><a class="js-nav" data-toggle="tab"
-										href="#home">项目信息</a>
-									</li>
+										href="#home">项目信息</a></li>
 									<li class=""><a class="js-nav" data-toggle="tab"
-										href="#manageperson">成员管理</a>
-									</li>
+										href="#manageperson">成员管理</a></li>
 									<li class=""><a class="js-nav" data-toggle="tab"
-										href="#myresource">资料区</a>
-									</li>
+										href="#myresource">资料区</a></li>
 									<li class=""><a class="js-nav" data-toggle="tab"
-										href="#discussion">讨论区</a>
-									</li>
+										href="#discussion">讨论区</a></li>
 								</ul>
 
 
@@ -102,14 +98,14 @@
 												<li><label for="name" style="font-weight:normal;">项目名称</label>
 													<input class="form-control" id="name" name="name"
 													style="margin-top:6px;width:90%;display:inline-block;"
-													value=" <s:property value='projectInfo.name'/>"></input></li>
+													value=" <s:property value='projectInfo.name'/>"></input>
+												</li>
 
 												<li><label for="number" style="font-weight:normal;">项目编号</label>
 													<input class="form-control"
 													style="margin-top:6px;width:90%;display:inline-block;"
 													id="number" name="number"
-													value="<s:property value='projectInfo.number'/>"></input>
-												</li>
+													value="<s:property value='projectInfo.number'/>"></input></li>
 												<li><label for="type" style="font-weight:normal;">项目类型</label>
 													<select id="type" name="type"
 													style="margin-top:6px;width:90%;display:inline-block;"
@@ -117,7 +113,8 @@
 														<option>
 															<s:property value='projectInfo.projectType.name' />
 														</option>
-												</select></li>
+												</select>
+												</li>
 												<li><label for="enterpriseName"
 													style="font-weight:normal;">依托单位</label> <select
 													id="enterpriseName" name="enterpriseName"
@@ -126,7 +123,8 @@
 														<option>
 															<s:property value='projectInfo.enterprise.enterpriseName' />
 														</option>
-												</select></li>
+												</select>
+												</li>
 												<li><label for="startDate" style="font-weight:normal;">时间安排</label>
 													<input type="text" id="startDate" name="startDate"
 													class="form-control"
@@ -144,8 +142,7 @@
 													<input class="form-control"
 													style="margin-top:6px;width:90%;display:inline-block;"
 													id="funds" name="funds"
-													value="<s:property value='projectInfo.funds'/>"></input>
-												</li>
+													value="<s:property value='projectInfo.funds'/>"></input></li>
 												<li><label style="font-weight:normal;" for="isPublic">是否公开</label>
 													<select id="isPublic" name="isPublic"
 													style="margin-top:6px;width:90%;display:inline-block;"
@@ -153,8 +150,7 @@
 														<option>
 															<s:property value='projectInfo.isPublic' />
 														</option>
-												</select>
-												</li>
+												</select></li>
 
 												<li><label style="font-weight:normal;" for="state">项目状态</label>
 													<select id="state"
@@ -163,8 +159,7 @@
 														<option>
 															<s:property value='projectInfo.projectState.name' />
 														</option>
-												</select>
-												</li>
+												</select></li>
 
 												<li><label style="font-weight:normal;margin-top:3px;"
 													for="introduction">项目介绍</label> <textarea id="introduction"
@@ -172,7 +167,8 @@
 														class="form-control"
 														style="text-align:left;margin-top:6px;width:90%;display:inline-block; ">
 													<s:property value='projectInfo.introduction' />
-									</textarea></li>
+									</textarea>
+												</li>
 												<li>
 													<div class="form-group">
 														<div class="controls">
@@ -182,8 +178,7 @@
 
 															</center>
 														</div>
-													</div>
-												</li>
+													</div></li>
 											</ul>
 										</form>
 									</div>
@@ -211,23 +206,30 @@
 													<s:iterator value="reProjectUser" id="reProjectUser"
 														status="st">
 														<tr>
-															<td><s:property value="#st.count"/>
-															</td>
-															<td><s:if test="#reProjectUser.userName==null||''.equals(#reProjectUser.userName)">------</s:if>
-															<s:else><s:property value='#reProjectUser.userName'/></s:else>
-															</td>
-															<td><s:if test="#reProjectUser.userInfo.email==null||''.equals(#reProjectUser.userInfo.email)">------</s:if>
-															<s:else><s:property value='#reProjectUser.userInfo.email'/></s:else>
-															</td>
-															<td><s:if test="#reProjectUser.enterpriseName==null||''.equals(#reProjectUser.enterpriseName)">------</s:if>
-															<s:else><s:property value='#reProjectUser.enterpriseName'/></s:else>
-															</td>
+															<td><s:property value="#st.count" /></td>
+															<td><s:if
+																	test="#reProjectUser.userName==null||''.equals(#reProjectUser.userName)">------</s:if>
+																<s:else>
+																	<s:property value='#reProjectUser.userName' />
+																</s:else></td>
+															<td><s:if
+																	test="#reProjectUser.userInfo.email==null||''.equals(#reProjectUser.userInfo.email)">------</s:if>
+																<s:else>
+																	<s:property value='#reProjectUser.userInfo.email' />
+																</s:else></td>
+															<td><s:if
+																	test="#reProjectUser.enterpriseName==null||''.equals(#reProjectUser.enterpriseName)">------</s:if>
+																<s:else>
+																	<s:property value='#reProjectUser.enterpriseName' />
+																</s:else></td>
 															<td><s:if
 																	test="#reProjectUser.userInfo.phone==null||
 															''.equals(#reProjectUser.userInfo.phone)">------</s:if>
-															<s:else><s:property value='#reProjectUser.userInfo.phone'/></s:else>
+																<s:else>
+																	<s:property value='#reProjectUser.userInfo.phone' />
+																</s:else></td>
+															<td><a>删除</a>
 															</td>
-															<td><a>删除</a></td>
 														</tr>
 													</s:iterator>
 												</tbody>
@@ -259,9 +261,10 @@
 															<ul style="list-style:none;margin-top:7px;"
 																id="course-item-list">
 																<li><input type="hidden" name="projectId"
-																	value="<s:property value='projectInfo.id'/>"></input></li>
+																	value="<s:property value='projectInfo.id'/>"></input>
+																</li>
 
-															<!--  	<li><label for="fileName"
+																<!--  	<li><label for="fileName"
 																	style="font-weight:normal;">文件名称</label> <input
 																	class="form-control" id="fileName" name="fileName"
 																	required="required"
@@ -277,8 +280,7 @@
 																		<option value="document">文档资料</option>
 																		<option value="patent">专利</option>
 																		<option value="thesis">论文</option>
-																</select>
-																</li>
+																</select></li>
 
 
 																<li id="patentNumLi" style="display: none;"><label
@@ -293,8 +295,7 @@
 																	<input id="patentDate" class="form-control"
 																	required="required" name="patentDate"
 																	style="margin-top:6px;width:80%;display:inline-block;"
-																	onclick="WdatePicker()" />
-																</li>
+																	onclick="WdatePicker()" /></li>
 
 																<li id="patentOrgLi" style="display: none;"><label
 																	for="patentOrg" style="font-weight:normal;">机构名称</label>
@@ -317,8 +318,7 @@
 																	<input id="thesisDate" class="form-control"
 																	name="thesisDate" required="required"
 																	style="margin-top:6px;width:80%;display:inline-block;"
-																	onclick="WdatePicker()" />
-																</li>
+																	onclick="WdatePicker()" /></li>
 
 																<li id="thesisPaginationLi" style="display: none;"><label
 																	for="thesisPagination" style="font-weight:normal;">论文页码</label>
@@ -381,15 +381,67 @@
 
 
 
-
 										<ul id="patentList" class="media-list"
 											style="margin-top:10px;">
+											<s:iterator value="patentList" id="patentList">
+												<li class="media"><div class="media-body">
+														<div class="mbs">
+														<a href='<s:url action="download">
+														<s:param name="filePath"><s:property value="#patentList.patentPath"></s:property>
+														</s:param><s:param name="fileName"><s:property value="#patentList.name"></s:property></s:param></s:url>'>
+														<s:property value="#patentList.name"/></a>
+														</div>
+														<div class="text-sm">
+															<span class="text-muted">applyDate:<s:property value="#patentList.applyDate"/></span> <span
+																class="bullet">•</span> <span class="text-muted">Patent</span>
+																<s:if test="userEmail.equals(#patentList.userInfo.email)"> <span
+																class="bullet">•</span> <a>delete</a></s:if>
+														</div>
+													</div>
+												</li>
+											</s:iterator>
+
 										</ul>
 										<ul id="thesisList" class="media-list"
 											style="margin-top:10px;">
+											
+											<s:iterator value="thesisList" id="thesisList">
+												<li class="media"><div class="media-body">
+														<div class="mbs">
+														<a href='<s:url action="download">
+														<s:param name="filePath"><s:property value="#thesisList.thesisPath"></s:property>
+														</s:param><s:param name="fileName"><s:property value="#thesisList.topic"></s:property></s:param></s:url>'>
+														<s:property value="#thesisList.topic"/></a>
+														</div>
+														<div class="text-sm">
+															<span class="text-muted">publishDate:<s:property value="#thesisList.publishDate"/></span> <span
+																class="bullet">•</span> <span class="text-muted">Thesis</span>
+																<s:if test="userEmail.equals(#thesisList.userInfo.email)"> <span
+																class="bullet">•</span> <a>delete</a></s:if>
+														</div>
+													</div>
+												</li>
+											</s:iterator>
+											
 										</ul>
 										<ul id="documentList" class="media-list"
 											style="margin-top:10px;">
+											<s:iterator value="documentList" id="documentList">
+												<li class="media"><div class="media-body">
+														<div class="mbs">
+														<a href='<s:url action="download">
+														<s:param name="filePath"><s:property value="#documentList.documentPath"></s:property>
+														</s:param><s:param name="fileName"><s:property value="#documentList.name"></s:property></s:param></s:url>'>
+														<s:property value="#documentList.name"/></a>
+														</div>
+														<div class="text-sm">
+															 <span class="bullet">•</span> <span class="text-muted">Document</span>
+																<s:if test="userEmail.equals(#documentList.userInfo.email)"> <span
+																class="bullet">•</span> <a>delete</a></s:if>
+														</div>
+													</div>
+												</li>
+											</s:iterator>
 										</ul>
 									</div>
 

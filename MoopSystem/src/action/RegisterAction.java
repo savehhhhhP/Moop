@@ -98,7 +98,7 @@ public class RegisterAction extends ActionSupport{
 
 
 		Enterprise enterprise = enterpriseService.findByName(_enterprise);
-		UserInfo stu = new UserInfo(enterprise, _nickname,_userEmail, _userPsw1);
+		UserInfo stu = new UserInfo(enterprise, _nickname,_userEmail.trim(), _userPsw1);
 		userService.save(stu);
 		return SUCCESS;
 	}

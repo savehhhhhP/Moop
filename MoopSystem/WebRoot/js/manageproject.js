@@ -256,141 +256,141 @@ function readFileIE(fileBrowser) {
 }
 
 // 初始化管理项目资源页面 使用ajax获取数据后在前台显示
-$('patentList')
-		.ready(
-				function() {
-					var projectId = $('#id').val();
-					var userEmail = $('#user')[0].innerText.trim();
-					$
-							.ajax({
-								type : "post",
-								url : "getprojectfilelist.action",
-								data : {
-									"projectId" : projectId
-								},
-								dataType : "json",
-								success : function(data) {
-									var content = "";
-									if (data.length > 0) {
-										for ( var i = 0; i < data.length; i++) {
-											var str = "<a href='' target='_blank'>&nbsp;delete</a></div></div></li>";
-											for ( var j = 0; j < data[i].length; j++) {
-												content += "<li class='media'><div class='media-body'><div class='mbs'>" 
-													    +"<a href='download.action?"
-													    + "filePath=" + data[i][j]['patentPath'] + "&fileName=" + data[i][j]['name'] +"'>"
-														+ data[i][j]['name']
-														+ "</a></div><div class='text-sm'>"
-														+ "<span class='text-muted'>applyDate:"
-														+ data[i][j]['applyDate']
-														+ "</span><span class='bullet'>•</span> <span class='text-muted'>patent</span>";
-												if (data[i][j]['userEmail']
-														.trim() == userEmail) {
-													content += str;
-												} else {
-													content += "</div></div></li>";
-												}
-											}
-										}
-									} else {
-										content = "暂无内容";
-									}
-									$('#patentList')[0].innerHTML = content;
-								},
-								error : function(XMLHttpRequest, textStatus,
-										errorThrown) {
-									alert("no data" + errorThrown);
-								}
-							});
-				});
+//$('patentList')
+//		.ready(
+//				function() {
+//					var projectId = $('#id').val();
+//					var userEmail = $('#user')[0].innerText.trim();
+//					$
+//							.ajax({
+//								type : "post",
+//								url : "getprojectfilelist.action",
+//								data : {
+//									"projectId" : projectId
+//								},
+//								dataType : "json",
+//								success : function(data) {
+//									var content = "";
+//									if (data.length > 0) {
+//										for ( var i = 0; i < data.length; i++) {
+//											var str = "<a href='' target='_blank'>&nbsp;delete</a></div></div></li>";
+//											for ( var j = 0; j < data[i].length; j++) {
+//												content += "<li class='media'><div class='media-body'><div class='mbs'>" 
+//													    +"<a href='download.action?"
+//													    + "filePath=" + data[i][j]['patentPath'] + "&fileName=" + data[i][j]['name'] +"'>"
+//														+ data[i][j]['name']
+//														+ "</a></div><div class='text-sm'>"
+//														+ "<span class='text-muted'>applyDate:"
+//														+ data[i][j]['applyDate']
+//														+ "</span><span class='bullet'>•</span> <span class='text-muted'>patent</span>";
+//												if (data[i][j]['userEmail']
+//														.trim() == userEmail) {
+//													content += str;
+//												} else {
+//													content += "</div></div></li>";
+//												}
+//											}
+//										}
+//									} else {
+//										content = "暂无内容";
+//									}
+//									$('#patentList')[0].innerHTML = content;
+//								},
+//								error : function(XMLHttpRequest, textStatus,
+//										errorThrown) {
+//									alert("no data" + errorThrown);
+//								}
+//							});
+//				});
 
-$('thesisList')
-		.ready(
-				function() {
-					var projectId = $('#id').val();
-					var userEmail = $('#user')[0].innerText.trim();
-					$
-							.ajax({
-								type : "post",
-								url : "getthesislist.action",
-								data : {
-									"projectId" : projectId
-								},
-								dataType : "json",
-								success : function(data) {
-									var content = "";
-									if (data.length > 0) {
-										for ( var i = 0; i < data.length; i++) {
-											var str = "<a href='' target='_blank'>&nbsp;delete</a></div></div></li>";
-											for ( var j = 0; j < data[i].length; j++) {
-												content += "<li class='media'><div class='media-body'><div class='mbs'>" 
-													    + "<a href='download.action?filePath=" + data[i][j]['thesisPath'] 
-												        + "&fileName=" + data[i][j]['name'] +"' target='_blank'>"
-														+ data[i][j]['name']
-														+ "</a></div><div class='text-sm'>"
-														+ "<span class='text-muted'>publishDate:"
-														+ data[i][j]['publishDate']
-														+ "</span><span class='bullet'>•</span> <span class='text-muted'>thesis</span>";
-												if (data[i][j]['userEmail']
-														.trim() == userEmail) {
-													content += str;
-												} else {
-													content += "</div></div></li>";
-												}
-											}
-										}
-									} else {
-										content = "暂无内容";
-									}
-									$('#thesisList')[0].innerHTML = content;
-								},
-								error : function(XMLHttpRequest, textStatus,
-										errorThrown) {
-									alert("no data" + errorThrown);
-								},
-							});
-				});
-
-$('documentList')
-		.ready(
-				function() {
-					var projectId = $('#id').val();
-					var userEmail = $('#user')[0].innerText.trim();
-					$
-							.ajax({
-								type : "post",
-								url : "getdocumentlist.action",
-								data : {
-									"projectId" : projectId
-								},
-								dataType : "json",
-								success : function(data) {
-									var content = "";
-									if (data.length > 0) {
-										for ( var i = 0; i < data.length; i++) {
-											var str = "<a href='' target='_blank'>&nbsp;delete</a></div></div></li>";
-											for ( var j = 0; j < data[i].length; j++) {
-												content += "<li class='media'><div class='media-body'><div class='mbs'>"
-													    +"<a href='download.action?filePath=" + data[i][j]['documentPath'] 
-												        + "&fileName=" + data[i][j]['name'] + "' target='_blank'>"
-														+ data[i][j]['name']
-														+ "</a></div><div class='text-sm'>"
-														+ "<span class='text-muted'>document</span>";
-												if (data[i][j]['userEmail']
-														.trim() == userEmail) {
-													content += str;
-												} else {
-													content += "</div></div></li>";
-												}
-											}
-										}
-									} else {
-										content = "暂无内容";
-									}
-									$('#documentList')[0].innerHTML = content;
-								},
-								error : function(XMLHttpRequest, textStatus,
-										errorThrown) {
-									alert("no data" + errorThrown);
-								}
-							});
-				});
+//$('thesisList')
+//		.ready(
+//				function() {
+//					var projectId = $('#id').val();
+//					var userEmail = $('#user')[0].innerText.trim();
+//					$
+//							.ajax({
+//								type : "post",
+//								url : "getthesislist.action",
+//								data : {
+//									"projectId" : projectId
+//								},
+//								dataType : "json",
+//								success : function(data) {
+//									var content = "";
+//									if (data.length > 0) {
+//										for ( var i = 0; i < data.length; i++) {
+//											var str = "<a href='' target='_blank'>&nbsp;delete</a></div></div></li>";
+//											for ( var j = 0; j < data[i].length; j++) {
+//												content += "<li class='media'><div class='media-body'><div class='mbs'>" 
+//													    + "<a href='download.action?filePath=" + data[i][j]['thesisPath'] 
+//												        + "&fileName=" + data[i][j]['name'] +"' target='_blank'>"
+//														+ data[i][j]['name']
+//														+ "</a></div><div class='text-sm'>"
+//														+ "<span class='text-muted'>publishDate:"
+//														+ data[i][j]['publishDate']
+//														+ "</span><span class='bullet'>•</span> <span class='text-muted'>thesis</span>";
+//												if (data[i][j]['userEmail']
+//														.trim() == userEmail) {
+//													content += str;
+//												} else {
+//													content += "</div></div></li>";
+//												}
+//											}
+//										}
+//									} else {
+//										content = "暂无内容";
+//									}
+//									$('#thesisList')[0].innerHTML = content;
+//								},
+//								error : function(XMLHttpRequest, textStatus,
+//										errorThrown) {
+//									alert("no data" + errorThrown);
+//								},
+//							});
+//				});
+//
+//$('documentList')
+//		.ready(
+//				function() {
+//					var projectId = $('#id').val();
+//					var userEmail = $('#user')[0].innerText.trim();
+//					$
+//							.ajax({
+//								type : "post",
+//								url : "getdocumentlist.action",
+//								data : {
+//									"projectId" : projectId
+//								},
+//								dataType : "json",
+//								success : function(data) {
+//									var content = "";
+//									if (data.length > 0) {
+//										for ( var i = 0; i < data.length; i++) {
+//											var str = "<a href='' target='_blank'>&nbsp;delete</a></div></div></li>";
+//											for ( var j = 0; j < data[i].length; j++) {
+//												content += "<li class='media'><div class='media-body'><div class='mbs'>"
+//													    +"<a href='download.action?filePath=" + data[i][j]['documentPath'] 
+//												        + "&fileName=" + data[i][j]['name'] + "' target='_blank'>"
+//														+ data[i][j]['name']
+//														+ "</a></div><div class='text-sm'>"
+//														+ "<span class='text-muted'>document</span>";
+//												if (data[i][j]['userEmail']
+//														.trim() == userEmail) {
+//													content += str;
+//												} else {
+//													content += "</div></div></li>";
+//												}
+//											}
+//										}
+//									} else {
+//										content = "暂无内容";
+//									}
+//									$('#documentList')[0].innerHTML = content;
+//								},
+//								error : function(XMLHttpRequest, textStatus,
+//										errorThrown) {
+//									alert("no data" + errorThrown);
+//								}
+//							});
+//				});

@@ -47,20 +47,12 @@
 		<action name="uploadfile" class="action.UploadFileAction">
 		</action>
 
-		<action name="getprojectfilelist" class="action.GetProjectFileListAction">
-		</action>
-
-		<action name="getthesislist" class="action.GetThesisListAction">
-		</action>
-
-		<action name="getdocumentlist" class="action.GetDocumentListAction">
-		</action>
 
 
 		<action name="download" class="action.downloadAction">
 			<result name="success" type="stream">
 				<param name="inputName">fileInput</param>
-				    <param name="contentType">application/octet-stream</param> 
+				    <param name="contentType">application/octet-stream;charset=ISO8859-1</param> 
 				<param name="contentDisposition">attachment;filename=${fileName}</param>
 			</result>
 		</action>

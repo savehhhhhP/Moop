@@ -18,17 +18,18 @@
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="domain.Patent"/>
 <fullyQualifiedTypeName name="dao.ThesisDAO"/>
-<fullyQualifiedTypeName name="service.ThesisService"/>
-<fullyQualifiedTypeName name="domain.Thesis"/>
 <fullyQualifiedTypeName name="dao.DocumentDAO"/>
-<fullyQualifiedTypeName name="service.PatentService"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
-<fullyQualifiedTypeName name="service.UserService"/>
-<fullyQualifiedTypeName name="service.DocumentService"/>
-<fullyQualifiedTypeName name="domain.Document"/>
 <fullyQualifiedTypeName name="org.springframework.orm.hibernate3.support.HibernateDaoSupport"/>
 <fullyQualifiedTypeName name="service.ReProjectUserService"/>
 <fullyQualifiedTypeName name="dao.ReProjectUserDAO"/>
 <fullyQualifiedTypeName name="domain.ReProjectUser"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="service.PatentService"/>
+<fullyQualifiedTypeName name="service.UserService"/>
+<fullyQualifiedTypeName name="service.ThesisService"/>
+<fullyQualifiedTypeName name="service.DocumentService"/>
+<fullyQualifiedTypeName name="domain.Thesis"/>
+<fullyQualifiedTypeName name="domain.Document"/>
 </qualifiedTypeNameHistroy>
