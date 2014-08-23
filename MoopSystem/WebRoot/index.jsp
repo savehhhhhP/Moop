@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" contentType="text/html;charset=utf-8" %>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -11,7 +11,7 @@
 
 <title>MOOP</title>
 
-<script src="js/index.js" charset="UTF-8"></script>
+<script src="js/index.js" charset="utf-8"></script>
 <script src="js/jquery/jquery1.83.js"></script>
 <link href="css/extend/ext.css" rel="stylesheet">
 <link href="css/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet">

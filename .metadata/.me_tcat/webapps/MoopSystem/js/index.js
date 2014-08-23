@@ -1,4 +1,4 @@
-
+﻿
 function displayindexpage(){
 	  $.ajax({
           type: "post",
