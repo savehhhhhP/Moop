@@ -8,4 +8,6 @@ public interface PatentService {
 	public void save(Patent patent);
 
 	public List<Patent> selectByProjectId(int projectId);
+
+	public void deleteById(int fileId);
 }

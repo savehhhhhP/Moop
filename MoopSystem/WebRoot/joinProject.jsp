@@ -24,7 +24,6 @@
 <link href="css/myproject.css" rel="stylesheet">
 <script src="js/jquery/jquery1.83.js"></script>
 <script src="css/bootstrap-3.1.1-dist/js/bootstrap.js"></script>
-<script src="js/myproject.js"></script>
 <script src="js/button.js"></script>
 
 </head>
@@ -47,7 +46,7 @@
 									<div class="list-group-heading">我的项目</div>
 									<ul class="list-group">
 										<a class="list-group-item" href="myProject.jsp">我管理的项目</a>
-										<a class="list-group-item active" href="joinProject.jsp">我参与的项目</a>
+										<a class="list-group-item active" href="getjoinproject.action">我参与的项目</a>
 										<a class="list-group-item" href="">我的问答</a>
 										<a class="list-group-item" href="">我的话题</a>
 										<a class="list-group-item" href="">我的笔记</a>
@@ -68,27 +67,24 @@
 					
 						
 						<div class="panel-body">
-							<ul class="course-grids" id="myprojectlist">
-								
+							<ul class="course-grids" id="joinprojectlist">
+							<s:iterator value="reProjectUserList" id="reProjectUserList">
 								<li class="course-grid"><div class="grid-body"
 									style="position: 
 									relative;display: block;overflow: hidden;
 									text-decoration: none;border-radius: 4px;color: #353535;text-align:center;padding-bottom:5px;">
-										<img src="image/project 1.jpg" class="img-responsive thumb">
-										<span class="title">项目一</span>
-
-
+										<img src='<s:property value="#reProjectUserList.projectInfo.PicturePath"/>' class='img-responsive thumb'>
+										<span class="title"><s:property value='#reProjectUser.projectInfo.Name'/></span>
 										<div class="learn-status">
 											<div class="progress">
 												<div class="progress-bar progress-bar-success"
 													style="width: 0%;"></div>
 											</div>
-											
 											<div class="action">
 												<a class="btn btn-primary btn-sm" href="manageProject.jsp">进入项目</a>
 											</div>
 										</div> </div></li>
-										 
+										 </s:iterator>
 							</ul>
 
 						</div>

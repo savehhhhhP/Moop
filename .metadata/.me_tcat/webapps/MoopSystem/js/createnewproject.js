@@ -1,6 +1,6 @@
-$('project.type').ready(
+ï»¿$('project.type').ready(
 		function() {
-			// È¡µÃÑ§Ğ£·ÅÈëÏÂÀ­¿ò
+			// å–å¾—å­¦æ ¡æ”¾å…¥ä¸‹æ‹‰æ¡†
 			$.ajax({
 				type : "post",
 				url : "getprojecttype.action",
@@ -14,14 +14,14 @@ $('project.type').ready(
 					}
 				},
 				error : function(XMLHttpRequest, textStatus, errorThrown) {
-					alert(" ddd" + "ajaxÈ¡Ñ§Ğ£ĞÅÏ¢³ö´í-" + errorThrown + "fff");
+					alert(" ddd" + "ajaxå–å­¦æ ¡ä¿¡æ¯å‡ºé”™-" + errorThrown + "fff");
 				}
 			});
 		});
 
 $('project.enterprise').ready(
 		function() {
-			// È¡µÃÑ§Ğ£·ÅÈëÏÂÀ­¿ò
+			// å–å¾—å­¦æ ¡æ”¾å…¥ä¸‹æ‹‰æ¡†
 			$.ajax({
 				type : "post",
 				url : "getprojectenterprise.action",
@@ -34,14 +34,14 @@ $('project.enterprise').ready(
 					}
 				},
 				error : function(XMLHttpRequest, textStatus, errorThrown) {
-					alert(" ddd" + "ajaxÈ¡Ñ§Ğ£ĞÅÏ¢³ö´í-" + errorThrown + "fffff");
+					alert(" ddd" + "ajaxå–å­¦æ ¡ä¿¡æ¯å‡ºé”™-" + errorThrown + "fffff");
 				}
 			});
 		});
 
 $('project.state').ready(
 		function() {
-			// È¡µÃÑ§Ğ£·ÅÈëÏÂÀ­¿ò
+			// å–å¾—å­¦æ ¡æ”¾å…¥ä¸‹æ‹‰æ¡†
 			$.ajax({
 				type : "post",
 				url : "getprojectstate.action",
@@ -54,7 +54,7 @@ $('project.state').ready(
 					}
 				},
 				error : function(XMLHttpRequest, textStatus, errorThrown) {
-					alert(" ddd" + "ajaxÈ¡Ñ§Ğ£ĞÅÏ¢³ö´í-" + errorThrown + "ddddd");
+					alert(" ddd" + "ajaxå–å­¦æ ¡ä¿¡æ¯å‡ºé”™-" + errorThrown + "ddddd");
 				}
 			});
 		});
@@ -67,15 +67,15 @@ function selectfile() {
 function readFile(fileBrowser) {
 	alert(navigator.userAgent.toLowerCase());
 	alert(navigator.userAgent.indexOf("msie"));
-	if (navigator.userAgent.indexOf("MSIE") == -1) // ä¯ÀÀÆ÷ÎªIE
+	if (navigator.userAgent.indexOf("MSIE") == -1) // æµè§ˆå™¨ä¸ºIE
 		readFileIE(fileBrowser);
 	else if (navigator.userAgent.indexOf("Firefox") > 0
-			|| navigator.userAgent.indexOf("Mozilla") > 0) // ä¯ÀÀÆ÷Îªfirefox
+			|| navigator.userAgent.indexOf("Mozilla") > 0) // æµè§ˆå™¨ä¸ºfirefox
 		readFileFirefox(fileBrowser);
 	else
 		alert("Not IE or Firefox (userAgent=" + navigator.userAgent + ")");
 }
-// firefox»ñÈ¡ÎÄ¼şÈ«Â·¾¶µÄ·½·¨
+// firefoxè·å–æ–‡ä»¶å…¨è·¯å¾„çš„æ–¹æ³•
 function readFileFirefox(fileBrowser) {
 	try {
 		netscape.security.PrivilegeManager
@@ -107,7 +107,7 @@ function readFileFirefox(fileBrowser) {
 	alert(file.path); // I test to get the local file's path.
 	document.getElementById("project.picturePath").value = file.path;
 }
-// IE»ñÈ¡ÎÄ¼şÈ«Â·¾¶·½·¨
+// IEè·å–æ–‡ä»¶å…¨è·¯å¾„æ–¹æ³•
 function readFileIE(fileBrowser) {
 	var path = fileBrowser.value;
 	document.getElementById("project.picturePath").value = path;

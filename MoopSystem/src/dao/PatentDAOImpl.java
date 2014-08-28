@@ -25,22 +25,20 @@ public class PatentDAOImpl extends HibernateDaoSupport implements PatentDAO {
 	@Override
 	public List<Patent> selectByProjectId(int projectId) {
 		// TODO Auto-generated method stub
-		 String hql = "select new domain.Patent(p.projectInfo,p.userInfo,p.patentNum," + 
+		 String hql = "select new domain.Patent(p.id,p.projectInfo,p.userInfo,p.patentNum," + 
 			"p.applyDate,p.author,p.keyWords,p.abstractContent,p.organization,p.name,p.patentPath) from Patent as p where p.projectInfo.id=" + projectId;
 		 List<Patent> list = this.getHibernateTemplate().find(hql);
 		 return list;
+	}
 
+	@Override
+	public void deleteById(int fileId) {
 		// TODO Auto-generated method stub
-//		Session session = this.getHibernateTemplate().getSessionFactory()
-//				.openSession();
-//		Transaction tx = session.beginTransaction();
-//
-//		Query query = session
-//				.createQuery(hql);
-//		List<Patent> list = query.list();
-//		tx.commit();
-//		session.close();
-//		return list;
+		String hql = "from Patent p where p.id=" + fileId;
+		List<Patent> list = this.getHibernateTemplate().find(hql);
+		if(list.size() != 0){
+			this.getHibernateTemplate().delete(list.get(0));
+		}
 	}
 
 }

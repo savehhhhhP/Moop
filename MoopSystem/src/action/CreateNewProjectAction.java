@@ -223,15 +223,15 @@ public class CreateNewProjectAction extends ActionSupport {
 
 	public String execute() throws Exception {
 	
-		String masterName = "";
+		String userEmail = "";
 		UserInfo userInfo = null;
 		Enterprise enterprise = null;
 		ProjectState projectState = null;
 		ProjectType projectType = null;
 		Map session = ActionContext.getContext().getSession();
-		if (session.containsKey("userInfo")) {
-			masterName = (String) session.get("userInfo");
-			userInfo = userService.findByName(masterName);
+		if (session.containsKey("useEmail")) {
+			userEmail = (String) session.get("useEmail");
+			userInfo = userService.findByEmail(userEmail);
 		}
 		enterprise = entepriseService.findByName(_projectEnterprise.trim());
 		projectState = projectStateService.findByName(_projectState.trim());
@@ -244,7 +244,7 @@ public class CreateNewProjectAction extends ActionSupport {
 		projectInfo.setEnterpriseName(_projectEnterprise);
 		projectInfo.setFunds(Double.parseDouble(_projectFunds));
 		projectInfo.setUserInfo(userInfo);
-		projectInfo.setMasterName(masterName);
+		projectInfo.setMasterName(userInfo.getName().trim());
 		projectInfo.setNumber(_projectNumber);
 		projectInfo.setIsPublic(_isPublic);
 		projectInfo.setStartDate(_startDate);

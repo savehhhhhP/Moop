@@ -16,4 +16,13 @@ public class ReProjectUserDAOImpl extends HibernateDaoSupport implements ReProje
 		return list;
 	}
 
+	@Override
+	public List<ReProjectUser> selectJoinProject(Integer userId) {
+		// TODO Auto-generated method stub
+		String hql = "from ReProjectUser r where r.userInfo.id=" + userId + " and r.projectInfo.id not in(select id from ProjectInfo p where" +
+		             " p.userInfo.id=" + userId + ")";
+		List<ReProjectUser> list = this.getHibernateTemplate().find(hql);
+		return list;
+	}
+
 }

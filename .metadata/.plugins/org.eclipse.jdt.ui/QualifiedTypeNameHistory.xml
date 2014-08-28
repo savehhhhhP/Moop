@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="domain.ProjectInfo"/>
 <fullyQualifiedTypeName name="service.ProjectTypeService"/>
 <fullyQualifiedTypeName name="service.ProjectStateService"/>
 <fullyQualifiedTypeName name="domain.ProjectType"/>
@@ -8,28 +7,37 @@
 <fullyQualifiedTypeName name="service.EnterpriseService"/>
 <fullyQualifiedTypeName name="domain.Enterprise"/>
 <fullyQualifiedTypeName name="dao.PatentDAO"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="domain.UserInfo"/>
-<fullyQualifiedTypeName name="service.ProjectService"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="function.UploadOtherFileImpl"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-<fullyQualifiedTypeName name="domain.Patent"/>
 <fullyQualifiedTypeName name="dao.ThesisDAO"/>
 <fullyQualifiedTypeName name="dao.DocumentDAO"/>
-<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="org.springframework.orm.hibernate3.support.HibernateDaoSupport"/>
-<fullyQualifiedTypeName name="service.ReProjectUserService"/>
 <fullyQualifiedTypeName name="dao.ReProjectUserDAO"/>
-<fullyQualifiedTypeName name="domain.ReProjectUser"/>
-<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="domain.Document"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="net.sf.json.JSONArray"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="domain.Patent"/>
+<fullyQualifiedTypeName name="domain.Thesis"/>
+<fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="service.PatentService"/>
-<fullyQualifiedTypeName name="service.UserService"/>
 <fullyQualifiedTypeName name="service.ThesisService"/>
 <fullyQualifiedTypeName name="service.DocumentService"/>
-<fullyQualifiedTypeName name="domain.Thesis"/>
-<fullyQualifiedTypeName name="domain.Document"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="service.ProjectService"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
+<fullyQualifiedTypeName name="org.hibernate.mapping.Map"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="service.UserService"/>
+<fullyQualifiedTypeName name="domain.UserInfo"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="domain.ProjectInfo"/>
+<fullyQualifiedTypeName name="service.ReProjectUserService"/>
+<fullyQualifiedTypeName name="domain.ReProjectUser"/>
 </qualifiedTypeNameHistroy>

@@ -22,7 +22,7 @@ public class UploadOtherFileImpl implements UploadFile{
 		// TODO Auto-generated method stub
 		
 		String webpath=ServletActionContext.getRequest().getSession().getServletContext().getRealPath("/");
-		String dir = webpath + "/" + UPLOADDIR + "/" + email + "/" + projectId;
+		String dir = webpath + UPLOADDIR + "\\" + email + "\\" + projectId;
 		File fileLocation = new File(dir);
 		if(!fileLocation.exists()){
 			if(!fileLocation.mkdirs()){

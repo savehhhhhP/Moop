@@ -40,6 +40,20 @@ public class Document implements java.io.Serializable {
 		this.author = author;
 		this.documentPath = documentPath;
 	}
+	
+	public Document(Integer id, ProjectInfo projectInfo, UserInfo userInfo, String name,
+			String keyWords, String abstractContent, String author,
+			String documentPath) {
+		this.id = id;
+		this.projectInfo = projectInfo;
+		this.userInfo = userInfo;
+		this.name = name;
+		this.keyWords = keyWords;
+		this.abstractContent = abstractContent;
+		this.author = author;
+		this.documentPath = documentPath;
+	}
+
 
 	/** full constructor */
 	public Document(ProjectInfo projectInfo, UserInfo userInfo, String name,

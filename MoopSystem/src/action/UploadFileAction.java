@@ -1,9 +1,15 @@
 package action;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Date;
 import java.util.Map;
 import java.util.Set;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.ServletActionContext;
 
 import service.DocumentService;
 import service.PatentService;
@@ -243,21 +249,18 @@ public class UploadFileAction extends ActionSupport {
 					fileAuthor, fileKeyWords, fileDescription, patentOrg,
 					this.getFileFileName(), filePath);
 			patentService.save(patent);
-			return null;
 		}else if(fileType.equals("thesis")){
 			thesis = new Thesis(projectInfo, userInfo, fileAuthor,
 					this.getFileFileName(), thesisOrg, thesisDate,
 					Integer.parseInt(thesisPagination), fileDescription, fileKeyWords,
 					filePath);
 			thesisService.save(thesis);
-			return null;
 		}
 		else if(fileType.equals("document")){
 			document = new Document(projectInfo, userInfo, this.getFileFileName(),
 					fileKeyWords, fileDescription, fileAuthor,
 					filePath);
 			documentService.save(document);
-			return null;
 		}
 		return null;
 	}

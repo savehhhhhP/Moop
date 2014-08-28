@@ -37,4 +37,12 @@ public class PatentServiceImpl implements PatentService{
 		return patentDAO.selectByProjectId(projectId);
 	}
 
+
+
+	@Override
+	public void deleteById(int fileId) {
+		// TODO Auto-generated method stub
+		patentDAO.deleteById(fileId);
+	}
+
 }

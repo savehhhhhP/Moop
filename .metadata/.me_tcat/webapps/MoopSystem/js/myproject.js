@@ -1,4 +1,4 @@
-//初始化我的项目页面=
+﻿//初始化我的项目页面=
 $('myprojectlist')
 		.ready(
 				function() {
@@ -12,9 +12,9 @@ $('myprojectlist')
 									if (data.length > 0) {
 										for ( var i = 0; i < data.length; i++) {
 											//List list = data[i];
-											//alert(JSON.s)
 											var object = JSON.stringify(data[i]);
-											alert(object);
+											//TODO maybe bug!
+											//alert(object);
 											content += "<li class='course-grid'>"
 													+ "<div class='grid-body' style='position:relative;display: block;overflow: hidden;text-decoration: none;border-radius: 4px;color: #353535;text-align:center;padding-bottom:5px;'>"
 													+ "<img src='"

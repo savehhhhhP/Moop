@@ -37,4 +37,12 @@ public class DocumentServiceImpl implements DocumentService{
 		return documentDAO.selectByProjectId(projectId);
 	}
 
+
+
+	@Override
+	public void deleteById(int fileId) {
+		// TODO Auto-generated method stub
+		documentDAO.deleteByd(fileId);
+	}
+
 }

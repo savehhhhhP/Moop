@@ -47,6 +47,23 @@ public class Thesis implements java.io.Serializable {
 		this.keyWords = keyWords;
 		this.thesisPath = thesisPath;
 	}
+	
+	public Thesis(Integer id, ProjectInfo projectInfo, UserInfo userInfo, String author,
+			String topic, String organization, String publishDate,
+			Integer pagination, String abstractContent, String keyWords,
+			String thesisPath) {
+		this.id = id;
+		this.projectInfo = projectInfo;
+		this.userInfo = userInfo;
+		this.author = author;
+		this.topic = topic;
+		this.organization = organization;
+		this.publishDate = publishDate;
+		this.pagination = pagination;
+		this.abstractContent = abstractContent;
+		this.keyWords = keyWords;
+		this.thesisPath = thesisPath;
+	}
 
 	/** full constructor */
 	public Thesis(ProjectInfo projectInfo, UserInfo userInfo, String author,

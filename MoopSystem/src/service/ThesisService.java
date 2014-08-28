@@ -10,4 +10,6 @@ public interface ThesisService {
 	public void save(Thesis thesis);
 
 	public List<Thesis> selectByProjectId(int projectId);
+
+	public void deleteById(int fileId);
 }

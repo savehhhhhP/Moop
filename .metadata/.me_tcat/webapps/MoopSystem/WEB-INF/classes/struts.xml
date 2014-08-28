@@ -47,14 +47,23 @@
 		<action name="uploadfile" class="action.UploadFileAction">
 		</action>
 
-
-
 		<action name="download" class="action.downloadAction">
 			<result name="success" type="stream">
 				<param name="inputName">fileInput</param>
 				    <param name="contentType">application/octet-stream;charset=ISO8859-1</param> 
 				<param name="contentDisposition">attachment;filename=${fileName}</param>
 			</result>
+		</action>
+		
+		<action name="getfilelist" class="action.GetFileListAction">
+		</action>
+		
+		<action name="delete" class="action.DeleteFileAction">
+		</action>
+		
+		<action name="getjoinproject" class="action.GetJoinProjectListAction">
+		<result name="error">/myProject.jsp</result>
+		<result name="success">/joinProject.jsp</result>
 		</action>
 	</package>
 </struts>    

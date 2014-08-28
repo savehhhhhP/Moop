@@ -32,6 +32,12 @@ public class ThesisServiceImpl implements ThesisService{
 		return thesisDAO.selectByProjectId(projectId);
 	}
 
+	@Override
+	public void deleteById(int fileId) {
+		// TODO Auto-generated method stub
+		thesisDAO.deleteById(fileId);
+	}
+
 	
 
 }

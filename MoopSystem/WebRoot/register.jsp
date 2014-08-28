@@ -21,7 +21,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
 <script src="js/jquery/jquery1.83.js"></script>
+<script src="js/jquery/jquery.validate.js"></script>
 <script src="js/createnewproject.js"></script>
+<script src="js/register.js"></script>
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet">
 
@@ -83,17 +85,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						
 						<form id="register-form" method="post" action="register.action">
 							<div class="form-group">
-								<label class="control-label required" for="user.email">邮箱地址</label>
+								<label class="control-label required" for="email">邮箱地址</label>
 								<div>
-									<input type="text" id="user.email" required="required" name="_userEmail" 
+									<input type="text" id="email" required="required" name="_userEmail" 
 									  class="form-control" data-explain="填写你常用的邮箱作为登录帐号">
 									<p class="help-block">填写你常用的邮箱作为登录帐号</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="control-label required" for="register_nickname">昵称</label>
+								<label class="control-label required" for="name">昵称</label>
 								<div class="controls">
-									<input type="text" id="user.name" required="required"
+									<input type="text" id="name" required="required"
 										name="_nickname" class="form-control"
 										data-url="/register/nickname/check" data-widget-cid="widget-4"
 										data-explain="该怎么称呼你？ 中、英文均可，最长14个英文或7个汉字">
@@ -117,7 +119,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<div class="form-group">
 								<label class="control-label required" for="register_password">密码</label>
 								<div class="controls">
-									<input type="password" id="user.psw1" required="required"
+									<input type="password" id="password" required="required"
 										name="_userPsw1" class="form-control"
 										data-widget-cid="widget-2" data-explain="5-20位英文、数字、符号，区分大小写">
 									<p class="help-block">10位英文、数字、符号，区分大小写</p>
@@ -126,9 +128,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 							<div class="form-group">
 								<label class="control-label required"
-									for="register_confirmPassword">确认密码</label>
+									for="confirm_password">确认密码</label>
 								<div class="controls">
-									<input type="password" id="user.psw2" required="required"
+									<input type="password" id="confirm_password" required="required"
 										name="_userPsw2" class="form-control"
 										data-widget-cid="widget-3" data-explain="再输入一次密码">
 									<p class="help-block">再输入一次密码</p>

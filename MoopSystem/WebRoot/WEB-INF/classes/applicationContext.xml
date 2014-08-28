@@ -282,4 +282,41 @@
 	
 	<bean id="download" class="action.downloadAction">
 	</bean>
+	
+	<bean id="getfilelist" class="action.GetFileListAction">
+	<property name="userService">
+	<ref bean="userService"/>
+	</property>
+	<property name="documentService">
+	<ref bean="documentService"/>
+	</property>
+	<property name="patentService">
+	<ref bean="patentService"/>
+	</property>
+	<property name="thesisService">
+	<ref bean="thesisService"/>
+	</property>
+	</bean>
+	
+	<bean id="delete" class="action.DeleteFileAction">
+	<property name="patentService">
+	<ref bean="patentService"/>
+	</property>
+	<property name="thesisService">
+	<ref bean="thesisService"/>
+	</property>
+	<property name="documentService">
+	<ref bean="documentService"/>
+	</property>
+	</bean>
+	
+	
+	<bean id="getjoinproject" class="action.GetJoinProjectListAction">
+	<property name="reProjectUserService">
+	<ref bean="reProjectUserService"/>
+	</property>
+	<property name="userService">
+	<ref bean="userService"/>
+	</property>
+	</bean>
 </beans>

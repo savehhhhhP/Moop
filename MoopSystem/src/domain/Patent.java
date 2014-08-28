@@ -46,6 +46,23 @@ public class Patent implements java.io.Serializable {
 		this.name = name;
 		this.patentPath = patentPath;
 	}
+	
+	public Patent(Integer id, ProjectInfo projectInfo, UserInfo userInfo, String patentNum,
+			String applyDate, String author, String keyWords,
+			String abstractContent, String organization, String name,
+			String patentPath) {
+		this.id = id;
+		this.projectInfo = projectInfo;
+		this.userInfo = userInfo;
+		this.patentNum = patentNum;
+		this.applyDate = applyDate;
+		this.author = author;
+		this.keyWords = keyWords;
+		this.abstractContent = abstractContent;
+		this.organization = organization;
+		this.name = name;
+		this.patentPath = patentPath;
+	}
 
 	/** full constructor */
 	public Patent(ProjectInfo projectInfo, UserInfo userInfo, String patentNum,

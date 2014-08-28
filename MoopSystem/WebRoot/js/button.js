@@ -1,4 +1,4 @@
-function manageproject(){
+﻿function manageproject(){
 	location.href="manageProject.jsp";
 };
 

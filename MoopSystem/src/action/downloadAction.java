@@ -14,7 +14,7 @@ public class downloadAction extends ActionSupport {
     private InputStream fileInput;  
     private String fileName;  
     private String filePath;
-    public String getFileName() {  
+    public String getFileName() { 
     	try {
 			fileName = new String(fileName.getBytes(), "ISO8859-1");
 		} catch (UnsupportedEncodingException e) {
@@ -45,6 +45,13 @@ public class downloadAction extends ActionSupport {
 	}
 
 	public String execute() throws Exception{  
+		HttpServletRequest request = ServletActionContext.getRequest();
+		if(fileName.equals("")){
+			fileName = request.getParameter("fileName");
+		}
+		if("filePath".equals("")){
+			filePath = request.getParameter("filePath");
+		}
     	fileInput=ServletActionContext.getServletContext().getResourceAsStream("/" + filePath);  
         return "success";  
     }  

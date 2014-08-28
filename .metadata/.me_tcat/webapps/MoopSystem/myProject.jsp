@@ -47,7 +47,7 @@
 									<div class="list-group-heading">我的项目</div>
 									<ul class="list-group">
 										<a class="list-group-item active" href="myProject.jsp">我管理的项目</a>
-										<a class="list-group-item" href="joinProject.jsp">我参与的项目</a>
+										<a class="list-group-item" href="getjoinproject.action">我参与的项目</a>
 										<a class="list-group-item" href="">我的问答</a>
 										<a class="list-group-item" href="">我的话题</a>
 										<a class="list-group-item" href="">我的笔记</a>

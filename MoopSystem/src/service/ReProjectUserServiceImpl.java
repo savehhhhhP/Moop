@@ -29,4 +29,12 @@ public class ReProjectUserServiceImpl implements ReProjectUserService{
 		return reProjectUserDAO.selectReProjectUserInfo(projectId);
 	}
 
+
+
+	@Override
+	public List<ReProjectUser> selectJoinProject(Integer userId) {
+		// TODO Auto-generated method stub
+		return reProjectUserDAO.selectJoinProject(userId);
+	}
+
 }
